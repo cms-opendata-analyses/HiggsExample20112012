@@ -1,7 +1,7 @@
 # HiggsExample11-12
 This example guides the user to reproducing the discovery of the Higgs boson using the 2011 and 2012 datasets, in the four-lepton final states. It contains multiple levels of examples, from very simple to a full analysis, all with CMS Open Data.
 
-# Detailed instructions:
+# Introduction
 
 authors: N.Z. Jomhari, A. Geiser, A. Anuar 
 
@@ -75,6 +75,7 @@ The Higgs contribution is scaled to describe the data in the signal region.
 The (very small) top contribution remains scaled to the MC generator cross 
 section.     
 
+# Detailed instructions:
 There are four levels of increasing complexity for this example:
 
 ## Level 1 (easy): Compare
@@ -286,4 +287,11 @@ mkedanlzr DemoAnalyzer
 cd DemoAnalyzer 
 scram b
 cd $CMSSW_BASE
+```
+You need to move some files around for the Level 3 version of the tutorial, here again it is assumed you installed in a directory WorkDirCMSHiggs
+```
+cd $CMSSW_BASE
+cp WorkDirCMSHiggs/HiggsExample11-12/Level3/BuildFile.xml Demo/DemoAnalyzer/.
+cp WorkDirCMSHiggs/HiggsExample11-12/Level3/HiggsDemoAnalyzer.cc Demo/DemoAnalyzer/src/.
+scram b
 ```
