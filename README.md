@@ -189,12 +189,14 @@ There are four levels of increasing complexity for this example:
         
     ### Downloading and compiling
     - If you have not already done so, download and install the code. For this example, all active code is present in the `Level3` directory. You will also use the files in the `rootfiles` directory when making the final plot.
-            ```
-            mkdir WorkDirCMSHiggs
-            cd WorkDirCMSHiggs
-            git clone https://github.com/cms-opendata-analyses/HiggsExample11-12.git
-            cd HiggsExample11-12/Level3
-            ```
+    
+        ```
+        mkdir WorkDirCMSHiggs
+        cd WorkDirCMSHiggs
+        git clone https://github.com/cms-opendata-analyses/HiggsExample11-12.git
+        cd HiggsExample11-12/Level3
+        ```
+        
     - you need to replace the build file in the `Demo/DemoAnalyzer` directory (which you should be familiar with from the prerequisites) to include the right dependencies. In addition you should move the source code to the right directory.
         
         - replace BuildFile.xml by the version downloaded from this record
@@ -204,7 +206,6 @@ There are four levels of increasing complexity for this example:
         - copy HiggsDemoAnalyzer.cc from this record to the /src subdirectory
             ```
             cp HiggsDemoAnalyzer.cc $CMSSW_BASE/Demo/DemoAnalyzer/src/.
-            scram b
             ```
         - recompile
             ```
