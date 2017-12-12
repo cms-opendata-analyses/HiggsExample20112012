@@ -122,20 +122,15 @@ There are four levels of increasing complexity for this example:
         cd HiggsExample11-12/rootfiles/
         ```
         
-      - OR create a new directory, e.g. rootfiles 
+      - OR create a new directory, e.g. rootfiles and switch to that directory
       
         ```      
         mkdir rootfiles
-        ```
-      
-        switch to that directory 
-        
-        ```
         cd rootfiles
         ```
         
         and download all the preproduced *.root files given in 
-        http://opendata-qa.web.cern.ch/search?page=1&size=20&q=5501] for all relevant samples to this directory 
+        http://opendata-qa.web.cern.ch/search?page=1&size=20&q=5501 for all relevant samples to this directory
         and download [M4Lnormdatall.cc](https://raw.githubusercontent.com/cms-opendata-analyses/HiggsExample11-12/master/rootfiles/M4Lnormdatall.cc), the ROOT macro to analyse these files and keep it in the same working directory as the *.root files
       
          ```
@@ -216,43 +211,49 @@ There are four levels of increasing complexity for this example:
         - Now you should have a working version of the `HiggsDemoAnalyzer` available in your environment. You can check this with the `edmPluginDump` command, or more useful `edmPluginDump | grep HiggsDemoAnalyzer`
     ### Running the example
     - In your `Level3` directory you should see the files `demoanalyzer_cfg_level3data.py` (data example) and `demoanalyzer_cfg_level3MC.py` (Higgs simulation example)
-        
-      - download demoanalyzer_cfg_level3data.py (data example) and 
-        demoanalyzer_cfg_level3MC.py (Higgs simulation example)
       - create datasets directory if not yet existing
-mkdir datasets
+      ```
+      mkdir datasets
+      ```
       - change to this directory
-cd datasets
-      - download the 2011 JSON validation file from [http://opendata.web.cern.ch/record/1001]
-      - if not yet done at level 2, create the directory rootfiles and 
-        download all the level 2 root files to this directory (see level 2)
+      ```
+      cd datasets
+      ```
+      - download the 2012 JSON validation file from [http://opendata.web.cern.ch/record/1002] to this directory
+            - The 2011 JSON validation file is available in case you are interested. [http://opendata.web.cern.ch/record/1001]
       - run the two analysis jobs (one on data, one on MC, the input files 
-        are already predefined) 
-cmsRun demoanalyzer_cfg_level3data.py
-        -> will produce output file DoubleMuParked2012C_10000_Higgs.root
+        are already predefined)
+        ```
+        cmsRun demoanalyzer_cfg_level3data.py
+        ```
+        -> will produce output file `DoubleMuParked2012C_10000_Higgs.root`
         containing 1 Higgs candidate from the data
-cmsRun demoanalyzer_cfg_level3MC.py
-        -> will produce output file Higgs4L1file.root
+        ```
+        cmsRun demoanalyzer_cfg_level3MC.py
+        ```
+        -> will produce output file `Higgs4L1file.root`
         containing the Higgs signal distributions with reduced statistics
-      - move the two .root files above to the .rootfiles directory, together
-        with the predefined files
-mv DoubleMuParked2012C_10000_Higgs.root rootfiles/.
-mv Higgs4L1file.root rootfiles/.
-      - change directory
-cd rootfiles
-      - download the macro M4Lnormdatall_lvl3.cc
-      - on the linux prompt, type 
-root -l M4Lnormdatall_lvl3.cc
+
+      - Analogous to the Level2 example, you will now use a macro `M4Lnormdatall_lvl3.cc` to analyse the files in `HiggsExample11-12/rootfiles`. However, besides that, you will add your one extra data point that you have processed
+      - on the linux prompt, type
+      ```
+      root -l M4Lnormdatall_lvl3.cc
+      ```
         -> you will get the output plot on the screen;
         the magenta Higgs signal histogram will now be the one you produced, 
         and the one data event which you have selected will be shown as a blue 
         triangle 
-      - either, on the ROOT canvas (picture) click 
-file->Quit ROOT
-        or, on the root [] prompt, type 
-.q     
-        -> you will exit ROOT and find the output plot in 
-           mass4l_combined_user3.pdf 
+      - to exit ROOT, either, on the ROOT canvas (picture) click   `file->Quit ROOT`
+        or, on the root [] prompt, type
+        ```
+        .q
+        ```
+        
+        -> you will exit ROOT and find the output plot in
+        mass4l_combined_user3.pdf
+        
+        - you can compare this plot with [the plots provided in 1.](https://github.com/cms-opendata-analyses/HiggsExample11-12/blob/master/README.md#level-1-easy-compare)
+
 <!----
 ## Level 4 (advanced): Full analysis
 
