@@ -104,21 +104,28 @@ There are four levels of increasing complexity for this example:
         Otherwise follow the instructions of the 2nd item of level 3 
         in order to install the Virtualbox and CERNVM and run ROOT there
         (the validation step with the Demo example might be skipped) 
-      - create a new directory, e.g. rootfiles 
+      - download the full git repository, in that case you get the directory structure automatically 
+
+        ```
+        git clone https://github.com/cms-opendata-analyses/HiggsExample11-12.git
+        cd HiggsExample11-12/examplerootfiles/
+        ```
+        
+      - OR create a new directory, e.g. exammplerootfiles 
       
         ```      
-        mkdir rootfiles
+        mkdir examplerootfiles
         ```
       
         switch to that directory 
         
         ```
-        cd rootfiles
+        cd examplerootfiles
         ```
         
-        and download the preproduced *.root histogram files given in 
-        [directory: rootfiles] for all relevant samples to this directory 
-      - download the ROOT macro 
+        and download the preproduced *.root and histogram files given in 
+        [https://github.com/cms-opendata-analyses/HiggsExample11-12/tree/master/examplerootfiles] for all relevant samples to this directory 
+        and download [M4Lnormdatall.cc](https://raw.githubusercontent.com/cms-opendata-analyses/HiggsExample11-12/master/examplerootfiles/M4Lnormdatall.cc), the ROOT macro to analyse these files and keep it in the same working directory as the *.root files
       
          ```
          M4Lnormdatall.cc 
