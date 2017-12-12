@@ -39,7 +39,7 @@ void M4Lnormdatall_lvl3() {
   TH1::SetDefaultSumw2(kTRUE);
   
   // Input file directory
-  string inDir = "./";  
+  string inDir = "../examplerootfiles/";  
   // Output file directory
   string outDir = "./";
 
@@ -68,11 +68,11 @@ void M4Lnormdatall_lvl3() {
 
   // Replace the input file for Higgs MC 2012
   // with user's generated Higgs input file level 3 
-  string inFileHZZ12 = "Higgs4L1file.root";
+  string inFileHZZ12 = "../Level3/Higgs4L1file.root";
 
   // Add the input file for data 
   // with user's generated data input file level 3
-  string inFileUser = "DoubleMuParked2012C_10000_Higgs.root";
+  string inFileUser = "../Level3/DoubleMuParked2012C_10000_Higgs.root";
 
   // Name of your output file
   // Preferably save the output file in pdf
