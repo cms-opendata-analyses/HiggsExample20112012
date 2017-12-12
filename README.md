@@ -95,9 +95,10 @@ There are four levels of increasing complexity for this example:
         introductory tutorial [https://root.cern.ch/introductory-tutorials] in order to understand what the ROOT 
         macro will do 
       - create a new directory, e.g. rootfiles 
-      ```      
-      mkdir rootfiles
-      ```
+         ```      
+         mkdir rootfiles
+         ```
+      
         switch to that directory 
         ```
       cd rootfiles
