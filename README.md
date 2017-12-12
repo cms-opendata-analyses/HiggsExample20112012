@@ -1,4 +1,6 @@
 # HiggsExample11-12
+adapted for github by F. Blekman
+
 This example guides the user to reproducing the discovery of the Higgs boson using the 2011 and 2012 datasets, in the four-lepton final states. It contains multiple levels of examples, from very simple to a full analysis, all with CMS Open Data.
 
 # Introduction
@@ -134,7 +136,7 @@ There are four levels of increasing complexity for this example:
         
         and download all the preproduced *.root files given in 
         http://opendata-qa.web.cern.ch/search?page=1&size=20&q=5501] for all relevant samples to this directory 
-        and download [M4Lnormdatall.cc](https://raw.githubusercontent.com/cms-opendata-analyses/HiggsExample11-12/master/examplerootfiles/M4Lnormdatall.cc), the ROOT macro to analyse these files and keep it in the same working directory as the *.root files
+        and download [M4Lnormdatall.cc](https://raw.githubusercontent.com/cms-opendata-analyses/HiggsExample11-12/master/rootfiles/M4Lnormdatall.cc), the ROOT macro to analyse these files and keep it in the same working directory as the *.root files
       
          ```
          M4Lnormdatall.cc 
@@ -188,7 +190,7 @@ There are four levels of increasing complexity for this example:
 
         
     ### Downloading and compiling
-    - If you have not already done so, download and install the code. For this example, all active code is present in the `Level3` directory. You will also use the files in the `rootfiles` directory when making the final plot.
+    - If you have not already done so, download and install the code. For this example, all active code is present in the `HiggsExample11-12/Level3` directory. You will also use the files in the `HiggsExample11-12/rootfiles` directory when making the final plot.
     
         ```
         mkdir WorkDirCMSHiggs
@@ -197,7 +199,7 @@ There are four levels of increasing complexity for this example:
         cd HiggsExample11-12/Level3
         ```
         
-    - you need to replace the build file in the `Demo/DemoAnalyzer` directory (which you should be familiar with from the prerequisites) to include the right dependencies. In addition you should move the source code to the right directory.
+    - you need to replace the build file in the `Demo/DemoAnalyzer` directory (which you should be familiar with from the prerequisites) to include the right dependencies. In addition you should move the analysis source code to the right directory.
         
         - replace BuildFile.xml by the version downloaded from this record
             ```
