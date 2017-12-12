@@ -176,7 +176,7 @@ There are four levels of increasing complexity for this example:
      depending on internet connection and computer performance, up to 
      ~few hours otherwise)
      ### Prerequisites
-        - if not already done follow instructions in
+    - if not already done follow instructions in
         CMS 2011 Virtual Machines: How to install  
         [http://opendata.web.cern.ch/docs/cms-virtual-machine-2011]
         * install VirtualBox
