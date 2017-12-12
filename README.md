@@ -111,7 +111,7 @@ There are four levels of increasing complexity for this example:
         cd HiggsExample11-12/examplerootfiles/
         ```
         
-      - OR create a new directory, e.g. exammplerootfiles 
+      - OR create a new directory, e.g. examplerootfiles 
       
         ```      
         mkdir examplerootfiles
@@ -123,7 +123,7 @@ There are four levels of increasing complexity for this example:
         cd examplerootfiles
         ```
         
-        and download the preproduced *.root and histogram files given in 
+        and download all the preproduced *.root files given in 
         [https://github.com/cms-opendata-analyses/HiggsExample11-12/tree/master/examplerootfiles] for all relevant samples to this directory 
         and download [M4Lnormdatall.cc](https://raw.githubusercontent.com/cms-opendata-analyses/HiggsExample11-12/master/examplerootfiles/M4Lnormdatall.cc), the ROOT macro to analyse these files and keep it in the same working directory as the *.root files
       
