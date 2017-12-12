@@ -288,7 +288,7 @@ cd DemoAnalyzer
 scram b
 cd $CMSSW_BASE
 ```
-You need to move some files around for the Level 3 version of the tutorial, here again it is assumed you installed in a directory WorkDirCMSHiggs
+You need to move some files around for the Level 3 version of the tutorial, here again it is assumed you installed in a directory `WorkDirCMSHiggs`.
 ```
 cd $CMSSW_BASE
 cp WorkDirCMSHiggs/HiggsExample11-12/Level3/BuildFile.xml Demo/DemoAnalyzer/.
