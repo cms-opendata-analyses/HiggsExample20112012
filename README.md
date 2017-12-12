@@ -165,7 +165,7 @@ There are four levels of increasing complexity for this example:
            mass4l_combined_user.pdf
            
       - you can compare this plot with [the plots provided in 1.](https://github.com/cms-opendata-analyses/HiggsExample11-12/blob/master/README.md#level-1-easy-compare)
-<!----
+
 ## Level 3 (intermediate): Produce
 
 3. *Produce* a ROOT data input file from original data and MC files for one 
@@ -174,19 +174,46 @@ There are four levels of increasing complexity for this example:
    containing your own input using a ROOT macro 
    (~few minutes to ~1 hour if Virtual machine is already installed, 
      depending on internet connection and computer performance, up to 
-     ~few hours otherwise) 
-   -> - if not already done follow instructions in 
+     ~few hours otherwise)
+     ### Prerequisites
+        - if not already done follow instructions in
         CMS 2011 Virtual Machines: How to install  
         [http://opendata.web.cern.ch/docs/cms-virtual-machine-2011]
         * install VirtualBox
         * install CERNVM Virtual Machine
-      - in particular, if not yet done, run the Demo program from  
+        - in particular, if not yet done, run the Demo program from
         * Test and Validate
         (needed by the subsequent program!)
-      - replace BuildFile.xml by the version downloaded from this record
-      - download HiggsDemoAnalyzer.cc from this record to the /src subdirectory
-      - recompile
-scram b
+ 
+
+        
+        ### Downloading and compiling
+        - If you have not already done so, download and install the code. For this example, all active code is present in the `Level3` directory. You will also use the files in the `rootfiles` directory when making the final plot.
+            ```
+            mkdir WorkDirCMSHiggs
+            cd WorkDirCMSHiggs
+            git clone https://github.com/cms-opendata-analyses/HiggsExample11-12.git
+            cd HiggsExample11-12/Level3
+            ```
+        - you need to replace the build file in the `Demo/DemoAnalyzer` directory (which you should be familiar with from the prerequisites) to include the right dependencies. In addition you should move the source code to the right directory.
+        
+            - replace BuildFile.xml by the version downloaded from this record
+            ```
+            cp BuildFile.xml $CMSSW_BASE/Demo/DemoAnalyzer/.
+            ```
+            - copy HiggsDemoAnalyzer.cc from this record to the /src subdirectory
+            ```
+            cp HiggsDemoAnalyzer.cc $CMSSW_BASE/Demo/DemoAnalyzer/src/.
+            scram b
+            ```
+            - recompile
+            ```
+            scram b
+            ```
+            - Now you should have a working version of the `HiggsDemoAnalyzer` available in your environment. You can check this with the `edmPluginDump` command, or more useful `edmPluginDump | grep HiggsDemoAnalyzer`
+        ### Running the example
+        - In your `Level3` directory you should see the files `demoanalyzer_cfg_level3data.py` (data example) and `demoanalyzer_cfg_level3MC.py` (Higgs simulation example)
+        
       - download demoanalyzer_cfg_level3data.py (data example) and 
         demoanalyzer_cfg_level3MC.py (Higgs simulation example)
       - create datasets directory if not yet existing
@@ -223,7 +250,7 @@ file->Quit ROOT
 .q     
         -> you will exit ROOT and find the output plot in 
            mass4l_combined_user3.pdf 
-
+<!----
 ## Level 4 (advanced): Full analysis
 
 4. Reproduce the full example analysis 
