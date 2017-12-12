@@ -117,23 +117,23 @@ There are four levels of increasing complexity for this example:
 
         ```
         git clone https://github.com/cms-opendata-analyses/HiggsExample11-12.git
-        cd HiggsExample11-12/examplerootfiles/
+        cd HiggsExample11-12/rootfiles/
         ```
         
-      - OR create a new directory, e.g. examplerootfiles 
+      - OR create a new directory, e.g. rootfiles 
       
         ```      
-        mkdir examplerootfiles
+        mkdir rootfiles
         ```
       
         switch to that directory 
         
         ```
-        cd examplerootfiles
+        cd rootfiles
         ```
         
         and download all the preproduced *.root files given in 
-        [https://github.com/cms-opendata-analyses/HiggsExample11-12/tree/master/examplerootfiles] for all relevant samples to this directory 
+        http://opendata-qa.web.cern.ch/search?page=1&size=20&q=5501] for all relevant samples to this directory 
         and download [M4Lnormdatall.cc](https://raw.githubusercontent.com/cms-opendata-analyses/HiggsExample11-12/master/examplerootfiles/M4Lnormdatall.cc), the ROOT macro to analyse these files and keep it in the same working directory as the *.root files
       
          ```
