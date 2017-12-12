@@ -81,11 +81,8 @@ There are four levels of increasing complexity for this example:
 
 1. *Compare* the provided final output plot 
    [mass4l_combine.pdf](https://raw.githubusercontent.com/cms-opendata-analyses/HiggsExample11-12/master/mass4l_combine.pdf)
-   
    or 
-   
    [mass4l_combine.png](https://raw.githubusercontent.com/cms-opendata-analyses/HiggsExample11-12/master/mass4l_combine.png)
-   
    to the published one, 
    https://inspirehep.net/record/1124338/files/H4l_mass_v3.png
    keeping in mind the caveats given above 
@@ -95,14 +92,18 @@ There are four levels of increasing complexity for this example:
 2. *Reproduce* the final output plot from the predefined histogram files 
    using a ROOT macro 
    (Time: ~few minutes - ~few hours, depending on setup and proficiency)
+   There are two ways to do this tutorial, with either a local software or virtual installation of the ROOT framework,  very commonly used in particle physics. 
+   
+   If not already proficient in ROOT, consider doing a brief ROOT 
+   introductory tutorial [https://root.cern.ch/introductory-tutorials] in order to understand what the ROOT 
+   macro will do 
+
+### With local ROOT installation
    -> - if a ROOT version on the local computer compatible with ROOT 5.32/00 
-        is running, use the local version (avoids installation of VM). 
+        is running, use the local version. This avoids installation of the CERN VM.
         Otherwise follow the instructions of the 2nd item of level 3 
         in order to install the Virtualbox and CERNVM and run ROOT there
         (the validation step with the Demo example might be skipped) 
-      - if not already proficient in ROOT, consider doing a brief ROOT 
-        introductory tutorial [https://root.cern.ch/introductory-tutorials] in order to understand what the ROOT 
-        macro will do 
       - create a new directory, e.g. rootfiles 
          ```      
          mkdir rootfiles
@@ -143,7 +144,7 @@ There are four levels of increasing complexity for this example:
          ```
         -> you will exit ROOT and find the output plot in 
            mass4l_combined_user.pdf
-      - you can compare this plot with the plots provided in 1.
+      - [you can compare this plot with the plots provided in 1.](https://github.com/cms-opendata-analyses/HiggsExample11-12/blob/master/README.md#level-1-easy-compare)
 
 ## Level 3 (intermediate): Produce
 
