@@ -102,9 +102,14 @@ There are four levels of increasing complexity for this example:
    ### With local ROOT installation
    -> - if a ROOT version on the local computer compatible with ROOT 5.32/00 
         is running, use the local version. This avoids installation of the CERN VM.
-        Otherwise follow the instructions of the 2nd item of level 3 
+   
+   ### Without a local ROOT installation
+        If you do not have ROOT installed, it is also possible to run this part of the tutorial in the CERN Virtual Machine. 
+        Follow the instructions of the 2nd item of level 3 
         in order to install the Virtualbox and CERNVM and run ROOT there
         (the validation step with the Demo example might be skipped) 
+
+   ### Downloading the code
       - download the full git repository, in that case you get the directory structure automatically 
 
         ```
