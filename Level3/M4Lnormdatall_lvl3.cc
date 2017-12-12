@@ -39,7 +39,7 @@ void M4Lnormdatall_lvl3() {
   TH1::SetDefaultSumw2(kTRUE);
   
   // Input file directory
-  string inDir = "../examplerootfiles/";  
+  string inDir = "../rootfiles/";  
   // Output file directory
   string outDir = "./";
 
@@ -184,6 +184,8 @@ void M4Lnormdatall_lvl3() {
 
   // H -> ZZ -> 4mu
   f2 = TFile::Open((inDir + inFileHZZ12).c_str());
+  std::cout <<"opening file " << (inDir + inFileHZZ12).c_str() << std::endl;
+
   TH1D *HZZto4mu12 = (TH1D*) f2->Get("demo/mass4mu_8TeV_low")->Clone();
   HZZto4mu12->Scale((lumi12 * scalexsecHZZ12) / nevtHZZ12); 
   //(data lumi * scaled cross section) / no.of event b4 any cut
@@ -407,6 +409,8 @@ void M4Lnormdatall_lvl3() {
 
   //////////////////////// HISTOGRAM 1 DATA FILE FROM USER ///////////////////////
   f3 = TFile::Open((inDir + inFileUser).c_str());
+  std::cout << "opening file " << (inDir + inFileUser).c_str() << std::endl;
+
   TH1D *DouMuser = (TH1D*) f3->Get("demo/mass2mu2e_8TeV_low")->Clone();
 
   DouMuser->SetMarkerColor(kBlue);
