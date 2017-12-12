@@ -98,16 +98,17 @@ There are four levels of increasing complexity for this example:
    introductory tutorial [https://root.cern.ch/introductory-tutorials] in order to understand what the ROOT 
    macro will do 
 
-### With local ROOT installation
+   ### With local ROOT installation
    -> - if a ROOT version on the local computer compatible with ROOT 5.32/00 
         is running, use the local version. This avoids installation of the CERN VM.
         Otherwise follow the instructions of the 2nd item of level 3 
         in order to install the Virtualbox and CERNVM and run ROOT there
         (the validation step with the Demo example might be skipped) 
       - create a new directory, e.g. rootfiles 
-         ```      
-         mkdir rootfiles
-         ```
+      
+        ```      
+        mkdir rootfiles
+        ```
       
         switch to that directory 
         
@@ -142,9 +143,11 @@ There are four levels of increasing complexity for this example:
          ```
          .q     
          ```
+         
         -> you will exit ROOT and find the output plot in 
            mass4l_combined_user.pdf
-      - [you can compare this plot with the plots provided in 1.](https://github.com/cms-opendata-analyses/HiggsExample11-12/blob/master/README.md#level-1-easy-compare)
+           
+      - you can compare this plot with [the plots provided in 1.](https://github.com/cms-opendata-analyses/HiggsExample11-12/blob/master/README.md#level-1-easy-compare)
 
 ## Level 3 (intermediate): Produce
 
