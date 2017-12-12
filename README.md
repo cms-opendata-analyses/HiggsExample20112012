@@ -96,11 +96,11 @@ section.
 There are four levels of increasing complexity for this example:
 
 1. *Compare* the provided final output plot 
-   mass4l_combine.pdf https://raw.githubusercontent.com/cms-opendata-analyses/HiggsExample11-12/master/mass4l_combine.pdf
+   https://raw.githubusercontent.com/cms-opendata-analyses/HiggsExample11-12/master/mass4l_combine.pdf
    
    or 
    
-   mass4l_combine.png https://raw.githubusercontent.com/cms-opendata-analyses/HiggsExample11-12/master/mass4l_combine.png
+   https://raw.githubusercontent.com/cms-opendata-analyses/HiggsExample11-12/master/mass4l_combine.png
    
    to the published one, 
    https://inspirehep.net/record/1124338/files/H4l_mass_v3.png
@@ -115,7 +115,7 @@ There are four levels of increasing complexity for this example:
         in order to install the Virtualbox and CERNVM and run ROOT there
         (the validation step with the Demo example might be skipped) 
       - if not already proficient in ROOT, consider doing a brief ROOT 
-        introductory tutorial [link] in order to understand what the ROOT 
+        introductory tutorial [https://root.cern.ch/introductory-tutorials] in order to understand what the ROOT 
         macro will do 
       - create a new directory, e.g. rootfiles 
 mkdir rootfiles
@@ -124,15 +124,23 @@ cd rootfiles
         and download the preproduced *.root histogram files given in 
         [directory: rootfiles] for all relevant samples to this directory 
       - download the ROOT macro 
+      ```
         M4Lnormdatall.cc 
+        ```
         from this record into the same directory
       - on the linux prompt, type 
+      ```
 root -l M4Lnormdatall.cc
+```
         -> you will get the output plot on the screen
       - either, on the ROOT canvas (picture) click 
+```
 file->Quit ROOT
+```
         or, on the root [] prompt, type 
+        ```
 .q     
+```
         -> you will exit ROOT and find the output plot in 
            mass4l_combined_user.pdf
       - you can compare this plot with the plots provided in 1.
