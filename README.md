@@ -230,7 +230,7 @@ There are four levels of increasing complexity for this example:
         will produce output file `Higgs4L1file.root` containing the Higgs signal distributions with reduced statistics
 
     - Analogous to the [Level 2](https://github.com/cms-opendata-analyses/HiggsExample11-12/blob/master/README.md#level-2-beginner-reproduce) example, you will now use a ROOT macro `M4Lnormdatall_lvl3.cc` to analyse the files in `HiggsExample11-12/rootfiles`. However, besides that, you will add your own one extra data point that you have processed!
-        - on the linux prompt, type
+        - on the linux prompt and in your `HiggsExample11-12/Level3` directory, type
         ```
         root -l M4Lnormdatall_lvl3.cc
         ```
