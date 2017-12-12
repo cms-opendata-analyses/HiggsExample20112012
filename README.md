@@ -104,6 +104,7 @@ There are four levels of increasing complexity for this example:
         is running, use the local version. This avoids installation of the CERN VM.
    
    ### Without a local ROOT installation
+   
         If you do not have ROOT installed, it is also possible to run this part of the tutorial in the CERN Virtual Machine. 
         Follow the instructions of the 2nd item of level 3 
         in order to install the Virtualbox and CERNVM and run ROOT there
@@ -138,6 +139,7 @@ There are four levels of increasing complexity for this example:
          ```
          
         from this record into the same directory
+      ### Running the code
       - on the linux prompt, type 
       
          ```
