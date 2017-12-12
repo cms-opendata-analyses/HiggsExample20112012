@@ -130,7 +130,8 @@ There are four levels of increasing complexity for this example:
         ```
         
         and download all the preproduced *.root files given in 
-        http://opendata-qa.web.cern.ch/search?page=1&size=20&q=5501 for all relevant samples to this directory
+        [tobereleased] <!--- http://opendata-qa.web.cern.ch/search?page=1&size=20&q=5501 --->
+        for all relevant samples to this directory
         and download [M4Lnormdatall.cc](https://raw.githubusercontent.com/cms-opendata-analyses/HiggsExample11-12/master/rootfiles/M4Lnormdatall.cc), the ROOT macro to analyse these files and keep it in the same working directory as the *.root files
       
          ```
@@ -215,7 +216,7 @@ There are four levels of increasing complexity for this example:
       ```
       mkdir $CMSSW_BASE/Demo/DemoAnalyzer/datasets
       ```
-    - The data conditions when the CMS detector was of high enough quality is stored in files of the json format. You can download the 2012 validation file from [http://opendata.web.cern.ch/record/1002], it should be copied to the `Demo/DemoAnalyzer/datasets` directory.
+    - The data conditions when the CMS detector was of high enough quality is stored in files of the json format. You can download the 2012 validation file from [http://opendata.web.cern.ch/record/1002], it should be copied to the `Demo/DemoAnalyzer/datasets` directory. In the same link there also are details on how the good-data selection is made.
       ```
       wget http://opendata.web.cern.ch/record/1002/files/Cert_190456-208686_8TeV_22Jan2013ReReco_Collisions12_JSON.txt $CMSSW_BASE/Demo/DemoAnalyzer/datasets/.
       ```
