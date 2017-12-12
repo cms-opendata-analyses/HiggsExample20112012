@@ -155,7 +155,7 @@ There are four levels of increasing complexity for this example:
            mass4l_combined_user.pdf
            
       - you can compare this plot with [the plots provided in 1.](https://github.com/cms-opendata-analyses/HiggsExample11-12/blob/master/README.md#level-1-easy-compare)
-
+<!----
 ## Level 3 (intermediate): Produce
 
 3. *Produce* a ROOT data input file from original data and MC files for one 
@@ -246,6 +246,7 @@ file->Quit ROOT
         ROOT tools   
       - go to 2., using your own Root output files instead of the predefined 
         ones
+--->
 
 # Setup instructions for the impatient
 
