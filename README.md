@@ -181,38 +181,38 @@ There are four levels of increasing complexity for this example:
         [http://opendata.web.cern.ch/docs/cms-virtual-machine-2011]
         * install VirtualBox
         * install CERNVM Virtual Machine
-        - in particular, if not yet done, run the Demo program from
+    - in particular, if not yet done, run the Demo program from
         * Test and Validate
         (needed by the subsequent program!)
  
 
         
-        ### Downloading and compiling
-        - If you have not already done so, download and install the code. For this example, all active code is present in the `Level3` directory. You will also use the files in the `rootfiles` directory when making the final plot.
+    ### Downloading and compiling
+    - If you have not already done so, download and install the code. For this example, all active code is present in the `Level3` directory. You will also use the files in the `rootfiles` directory when making the final plot.
             ```
             mkdir WorkDirCMSHiggs
             cd WorkDirCMSHiggs
             git clone https://github.com/cms-opendata-analyses/HiggsExample11-12.git
             cd HiggsExample11-12/Level3
             ```
-        - you need to replace the build file in the `Demo/DemoAnalyzer` directory (which you should be familiar with from the prerequisites) to include the right dependencies. In addition you should move the source code to the right directory.
+    - you need to replace the build file in the `Demo/DemoAnalyzer` directory (which you should be familiar with from the prerequisites) to include the right dependencies. In addition you should move the source code to the right directory.
         
-            - replace BuildFile.xml by the version downloaded from this record
+        - replace BuildFile.xml by the version downloaded from this record
             ```
             cp BuildFile.xml $CMSSW_BASE/Demo/DemoAnalyzer/.
             ```
-            - copy HiggsDemoAnalyzer.cc from this record to the /src subdirectory
+        - copy HiggsDemoAnalyzer.cc from this record to the /src subdirectory
             ```
             cp HiggsDemoAnalyzer.cc $CMSSW_BASE/Demo/DemoAnalyzer/src/.
             scram b
             ```
-            - recompile
+        - recompile
             ```
             scram b
             ```
-            - Now you should have a working version of the `HiggsDemoAnalyzer` available in your environment. You can check this with the `edmPluginDump` command, or more useful `edmPluginDump | grep HiggsDemoAnalyzer`
-        ### Running the example
-        - In your `Level3` directory you should see the files `demoanalyzer_cfg_level3data.py` (data example) and `demoanalyzer_cfg_level3MC.py` (Higgs simulation example)
+        - Now you should have a working version of the `HiggsDemoAnalyzer` available in your environment. You can check this with the `edmPluginDump` command, or more useful `edmPluginDump | grep HiggsDemoAnalyzer`
+    ### Running the example
+    - In your `Level3` directory you should see the files `demoanalyzer_cfg_level3data.py` (data example) and `demoanalyzer_cfg_level3MC.py` (Higgs simulation example)
         
       - download demoanalyzer_cfg_level3data.py (data example) and 
         demoanalyzer_cfg_level3MC.py (Higgs simulation example)
