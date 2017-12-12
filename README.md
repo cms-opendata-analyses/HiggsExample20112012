@@ -56,8 +56,11 @@ this example, while it was 3.2 standard deviations in this channel alone
 in the original publication. The difference is attributed to the less 
 sophisticated background suppression.
 In more recent (not yet public) CMS data sets with higher statistics the 
-signal is observed in a preliminary analysis with more than 5 standard 
-deviations in this channel alone [cite CMS-PAS-HIG-16-041]. 
+signal is observed in an analysis with more than 5 standard 
+deviations in this channel alone [https://inspirehep.net/record/1518828]. The most recent results on the search and observation of the Higgs boson in this decay mode are available here: http://cms-results.web.cern.ch/cms-results/public-results/publications/HIG/ZZ.html
+
+
+## Strategy 
 
 The analysis strategy is the following: Get the 4mu and 2mu2e final states 
 from the DoubleMuParked datasets and the 4e final state from the 
@@ -72,6 +75,8 @@ section.
 
 There are four levels of increasing complexity for this example:
 
+## Level 1 (easy): Compare
+
 1. *Compare* the provided final output plot 
    https://raw.githubusercontent.com/cms-opendata-analyses/HiggsExample11-12/master/mass4l_combine.pdf
    
@@ -82,6 +87,8 @@ There are four levels of increasing complexity for this example:
    to the published one, 
    https://inspirehep.net/record/1124338/files/H4l_mass_v3.png
    keeping in mind the caveats given above 
+
+## Level 2 (beginner): Reproduce
 
 2. *Reproduce* the final output plot from the predefined histogram files 
    using a ROOT macro 
@@ -135,6 +142,8 @@ There are four levels of increasing complexity for this example:
         -> you will exit ROOT and find the output plot in 
            mass4l_combined_user.pdf
       - you can compare this plot with the plots provided in 1.
+
+## Level 3 (intermediate): Produce
 
 3. *Produce* a ROOT data input file from original data and MC files for one 
    Higgs signal candidate and for the simulated Higgs signal with reduced 
@@ -192,6 +201,8 @@ file->Quit ROOT
         -> you will exit ROOT and find the output plot in 
            mass4l_combined_user3.pdf 
 
+## Level 4 (advanced): Full analysis
+
 4. Reproduce the full example analysis 
    (up to ~1 month or more on single CPU with fast internet connection, 
     depending on internet connection speed and computer performance)
@@ -247,4 +258,4 @@ cd WorkDirCMSHiggs
 git clone https://github.com/cms-opendata-analyses/HiggsExample11-12.git
 
 ```
-And then follow the instructions
+And then follow the instructions above
