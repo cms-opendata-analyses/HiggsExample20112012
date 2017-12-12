@@ -223,22 +223,22 @@ There are four levels of increasing complexity for this example:
         ```
         cmsRun demoanalyzer_cfg_level3data.py
         ```
-        will produce output file `DoubleMuParked2012C_10000_Higgs.root` containing 1 Higgs candidate from the data. If you get errors regarding the location of the file
+        will produce output file `DoubleMuParked2012C_10000_Higgs.root` containing 1 Higgs candidate from the data.
         ```
         cmsRun demoanalyzer_cfg_level3MC.py
         ```
         will produce output file `Higgs4L1file.root` containing the Higgs signal distributions with reduced statistics
 
       - Analogous to the [Level 2](https://github.com/cms-opendata-analyses/HiggsExample11-12/blob/master/README.md#level-2-beginner-reproduce) example, you will now use a ROOT macro `M4Lnormdatall_lvl3.cc` to analyse the files in `HiggsExample11-12/rootfiles`. However, besides that, you will add your own one extra data point that you have processed!
-      - on the linux prompt, type
-      ```
-      root -l M4Lnormdatall_lvl3.cc
-      ```
+        - on the linux prompt, type
+        ```
+        root -l M4Lnormdatall_lvl3.cc
+        ```
         -> you will get the output plot on the screen;
        the magenta Higgs signal histogram will now be the one you produced,
        and the one data event which you have selected will be shown as a blue
        triangle
-      - to exit ROOT, either, on the ROOT canvas (picture) click   `file->Quit ROOT`
+    - to exit ROOT, either, on the ROOT canvas (picture) click   `file->Quit ROOT`
         or, on the root [] prompt, type
         ```
         .q
@@ -247,7 +247,7 @@ There are four levels of increasing complexity for this example:
         -> you will exit ROOT and find the output plot in
         mass4l_combined_user3.pdf
         
-        - you can compare this plot with [the plots provided in 1.](https://github.com/cms-opendata-analyses/HiggsExample11-12/blob/master/README.md#level-1-easy-compare)
+    - you can compare this plot with [the plots provided in the Level 1 tutorial.](https://github.com/cms-opendata-analyses/HiggsExample11-12/blob/master/README.md#level-1-easy-compare)
 
 <!----
 ## Level 4 (advanced): Full analysis
