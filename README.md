@@ -85,7 +85,7 @@ There are four levels of increasing complexity for this example:
 
 2. *Reproduce* the final output plot from the predefined histogram files 
    using a ROOT macro 
-   (~few minutes - ~few hours, depending on setup and proficiency)
+   (Time: ~few minutes - ~few hours, depending on setup and proficiency)
    -> - if a ROOT version on the local computer compatible with ROOT 5.32/00 
         is running, use the local version (avoids installation of VM). 
         Otherwise follow the instructions of the 2nd item of level 3 
@@ -95,10 +95,13 @@ There are four levels of increasing complexity for this example:
         introductory tutorial [https://root.cern.ch/introductory-tutorials] in order to understand what the ROOT 
         macro will do 
       - create a new directory, e.g. rootfiles 
-      
-mkdir rootfiles
+      ```      
+      mkdir rootfiles
+      ```
         switch to that directory 
-cd rootfiles
+        ```
+      cd rootfiles
+      ```
         and download the preproduced *.root histogram files given in 
         [directory: rootfiles] for all relevant samples to this directory 
       - download the ROOT macro 
@@ -108,17 +111,17 @@ cd rootfiles
         from this record into the same directory
       - on the linux prompt, type 
       ```
-root -l M4Lnormdatall.cc
-```
+      root -l M4Lnormdatall.cc
+        ```
         -> you will get the output plot on the screen
       - either, on the ROOT canvas (picture) click 
-```
-file->Quit ROOT
-```
+      ```
+      file->Quit ROOT
+      ```
         or, on the root [] prompt, type 
         ```
-.q     
-```
+        .q     
+         ```
         -> you will exit ROOT and find the output plot in 
            mass4l_combined_user.pdf
       - you can compare this plot with the plots provided in 1.
