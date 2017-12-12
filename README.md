@@ -262,8 +262,10 @@ If you already have, start directly with:
 cd CMSSW_5_3_32/src
 cmsenv
 ```
+
+
 For this example, you need to create an additional directory, you can call it `WorkDirCMSHiggs` or choose another name.
-Go to this directory, and download the example code.
+Go to this directory, and download the example code from git. This repository contains the various examples.
 
 ```
 
@@ -272,4 +274,16 @@ cd WorkDirCMSHiggs
 git clone https://github.com/cms-opendata-analyses/HiggsExample11-12.git
 
 ```
-And then follow the instructions above
+And then follow the instructions above.
+
+If you are going to do the more advanced (Level 3/4) tutorials, you also need to make a demo analyser and compile it
+
+```
+cd $CMSSW_BASE
+mkdir Demo
+cd Demo
+mkedanlzr DemoAnalyzer
+cd DemoAnalyzer 
+scram b
+cd $CMSSW_BASE
+```
