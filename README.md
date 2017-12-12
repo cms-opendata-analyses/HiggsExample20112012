@@ -97,8 +97,11 @@ There are four levels of increasing complexity for this example:
 
 1. *Compare* the provided final output plot 
    mass4l_combine.pdf https://raw.githubusercontent.com/cms-opendata-analyses/HiggsExample11-12/master/mass4l_combine.pdf
+   
    or 
+   
    mass4l_combine.png https://raw.githubusercontent.com/cms-opendata-analyses/HiggsExample11-12/master/mass4l_combine.png
+   
    to the published one, 
    https://inspirehep.net/record/1124338/files/H4l_mass_v3.png
    keeping in mind the caveats given above 
