@@ -100,28 +100,37 @@ There are four levels of increasing complexity for this example:
          ```
       
         switch to that directory 
+        
         ```
-      cd rootfiles
-      ```
+        cd rootfiles
+        ```
+        
         and download the preproduced *.root histogram files given in 
         [directory: rootfiles] for all relevant samples to this directory 
       - download the ROOT macro 
-      ```
-        M4Lnormdatall.cc 
-        ```
+      
+         ```
+         M4Lnormdatall.cc 
+         ```
+         
         from this record into the same directory
       - on the linux prompt, type 
-      ```
-      root -l M4Lnormdatall.cc
-        ```
-        -> you will get the output plot on the screen
+      
+         ```
+         root -l M4Lnormdatall.cc
+         ```
+      
+      -> you will get the output plot on the screen
       - either, on the ROOT canvas (picture) click 
-      ```
-      file->Quit ROOT
-      ```
-        or, on the root [] prompt, type 
-        ```
-        .q     
+      
+         ```
+         file->Quit ROOT
+         ```
+         
+        or, on the root [] prompt, type the command to end your root session:
+        
+         ```
+         .q     
          ```
         -> you will exit ROOT and find the output plot in 
            mass4l_combined_user.pdf
