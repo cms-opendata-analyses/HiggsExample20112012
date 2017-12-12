@@ -7,8 +7,8 @@ authors: N.Z. Jomhari, A. Geiser, A. Anuar
 
 This research level example is a strongly simplified reimplementation of 
 parts of the original CMS Higgs-to-four-lepton analysis published in
-Phys.Lett. B716 (2012) 30-61,  arXiv:1207.7235, 
-https://inspirehep.net/record/1124338?ln=en
+[Phys.Lett. B716 (2012) 30-61,  arXiv:1207.7235, 
+https://inspirehep.net/record/1124338?ln=en](https://inspirehep.net/record/1124338?ln=en)
 
 The published reference plot which is being approximated in this example is  
 https://inspirehep.net/record/1124338/files/H4l_mass_v3.png
@@ -19,14 +19,14 @@ covered by this example.
 The highest level, of this example addresses users who feel they have at least 
 some minimal understanding of the content of this paper and of the meaning 
 of this reference plot, which can be reached via (separate) educational 
-exercises. [put some links here?]
+exercises. 
 The lower levels might also be interesting for educational applications.
 The example requires a minimal acquaintance with the linux operating system 
 and the Root analysis tool, which can also be obtained from corresponding 
-(separate) tutorials. [put some links?]
+(separate) tutorials.
 
 The example uses legacy versions of the original CMS data sets in the 
-CMS AOD [link] format, which slightly differ from the ones used for the 
+CMS AOD format, which slightly differ from the ones used for the 
 publication due to improved calibrations. It also uses legacy versions of the 
 corresponding Monte Carlo simulations, which are again close to, but not 
 identical to, the ones in the original publication. These legacy data and MC 
@@ -37,8 +37,8 @@ Since according to the CMS Open Data policy the fraction of data which are
 public (and used here) is only 50% of the available LHC Run I samples, 
 the statistical significance is reduced with respect to what can be 
 achieved with the full dataset. However, the original paper 
-Phys.Lett. B716 (2012) 30-61,  arXiv:1207.7235, 
-https://inspirehep.net/record/1124338?ln=en
+[Phys.Lett. B716 (2012) 30-61,  arXiv:1207.7235, 
+https://inspirehep.net/record/1124338?ln=en](https://inspirehep.net/record/1124338?ln=en)
 was also obtained with only part of the Run I statistics, roughly
 equivalent to the luminosity of the public set, but with only partial 
 statistical overlap.
@@ -57,7 +57,9 @@ in the original publication. The difference is attributed to the less
 sophisticated background suppression.
 In more recent (not yet public) CMS data sets with higher statistics the 
 signal is observed in an analysis with more than 5 standard 
-deviations in this channel alone [https://inspirehep.net/record/1518828]. The most recent results on the search and observation of the Higgs boson in this decay mode are available here: http://cms-results.web.cern.ch/cms-results/public-results/publications/HIG/ZZ.html
+deviations in this channel alone [https://inspirehep.net/record/1518828]. 
+The most recent results on the search and observation of the Higgs boson 
+in this decay mode are available here: http://cms-results.web.cern.ch/cms-results/public-results/publications/HIG/ZZ.html
 
 
 ## Strategy 
@@ -78,11 +80,11 @@ There are four levels of increasing complexity for this example:
 ## Level 1 (easy): Compare
 
 1. *Compare* the provided final output plot 
-   https://raw.githubusercontent.com/cms-opendata-analyses/HiggsExample11-12/master/mass4l_combine.pdf
+   [mass4l_combine.pdf](https://raw.githubusercontent.com/cms-opendata-analyses/HiggsExample11-12/master/mass4l_combine.pdf)
    
    or 
    
-   https://raw.githubusercontent.com/cms-opendata-analyses/HiggsExample11-12/master/mass4l_combine.png
+   [mass4l_combine.png](https://raw.githubusercontent.com/cms-opendata-analyses/HiggsExample11-12/master/mass4l_combine.png)
    
    to the published one, 
    https://inspirehep.net/record/1124338/files/H4l_mass_v3.png
