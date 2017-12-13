@@ -182,7 +182,7 @@ There are four levels of increasing complexity for this example:
         [http://opendata.web.cern.ch/docs/cms-virtual-machine-2011]
         * install VirtualBox
         * install CERNVM Virtual Machine
-        * install the CMSSW software environment
+    - install the CMSSW software environment
             ```
             cmsrel CMSSW_5_3_32
             ```
@@ -193,7 +193,7 @@ There are four levels of increasing complexity for this example:
             cmsenv
             ```
             You now have a working ROOT environment and all CMS code framework at your disposal. Next step is to add analysis code.
-        - optional: for better understanding of the code used in the following steps, it is highly recommended to also work through the *Test & Validate* section of the [http://opendata.web.cern.ch/docs/cms-virtual-machine-2011] instructions.
+    - optional: for better understanding of the code used in the following steps, it is highly recommended to also work through the *Test & Validate* section of the [http://opendata.web.cern.ch/docs/cms-virtual-machine-2011] instructions.
         
     ### Downloading and compiling
     
@@ -218,12 +218,12 @@ There are four levels of increasing complexity for this example:
     
     ### Running the example
     - In your `HiggsExample20112012/Level3` directory you should see the files `demoanalyzer_cfg_level3data.py` (data example) and `demoanalyzer_cfg_level3MC.py` (Higgs simulation example)
-    ```
-    # from HiggsExample20112012/HiggsDemoAnalyzer
-    cd ../Level3
-    ls
-    ```
-    - The data conditions when the CMS detector was of high enough quality is stored in files of the json format. You can download the 2012 validation file from [http://opendata.web.cern.ch/record/1002], in the same link there also are details on how the good-data selection is made. In this example has been copied to the repository, it is the file `datasets/Cert_190456-208686_8TeV_22Jan2013ReReco_Collisions12_JSON.txt`.
+        ```
+        # from HiggsExample20112012/HiggsDemoAnalyzer
+        cd ../Level3
+        ls
+        ```
+    - The data conditions when the CMS detector was of high enough quality is stored in files of the json format. You can download the 2012 validation file from [http://opendata.web.cern.ch/record/1002], in the same link there also are details on how the good-data selection is made. In this example the file has already been copied to the repository, it is the file `datasets/Cert_190456-208686_8TeV_22Jan2013ReReco_Collisions12_JSON.txt`.
 
     - run the two analysis jobs (one on data, one on MC, the input files are already predefined)
         ```
@@ -235,8 +235,9 @@ There are four levels of increasing complexity for this example:
         ```
         will produce output file `Higgs4L1file.root` containing the Higgs signal distributions with reduced statistics
 
-    - Analogous to the [Level 2](https://github.com/cms-opendata-analyses/HiggsExample20112012/blob/master/README.md#level-2-beginner-reproduce) example, you will now use a ROOT macro `M4Lnormdatall_lvl3.cc` to analyse the files in `HiggsExample20112012/rootfiles`. However, besides that, you will add your own one extra data point that you have processed!
-        - on the linux prompt and in your `HiggsExample20112012/Level3` directory, type
+    - Analogous to the [Level 2](https://github.com/cms-opendata-analyses/HiggsExample20112012/blob/master/README.md#level-2-beginner-reproduce) example, you will now use a ROOT macro `M4Lnormdatall_lvl3.cc` to analyse the files in `rootfiles`. However, besides that, you will add your own one extra data point that you have processed, which is loaded from the histograms in the `level2` directory!
+        - it is worthwhile to take a look at the  `M4Lnormdatall_lvl3.cc` macro, you can identify where the files are loaded and paths are set.
+    - on the linux prompt and in your `HiggsExample20112012/Level3` directory, type
         ```
         root -l M4Lnormdatall_lvl3.cc
         ```
