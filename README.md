@@ -109,27 +109,15 @@ There are four levels of increasing complexity for this example:
    ### Without a local ROOT installation
  
    If you do not have ROOT installed, it is also possible to run this part of the tutorial in the CERN Virtual Machine.
-   Follow the instructions in the Level 3 tutorial in order to install the Virtualbox and CERNVM and run ROOT in the virtual machine [http://opendata.cern.ch/VM/CMS/2011]
+   Follow the instructions in the Prerequisites section of the Level 3 tutorial]in order to install the Virtualbox and CERNVM and run ROOT in the virtual machine [http://opendata.cern.ch/VM/CMS/2011]
    
-   Once you have opened the CERNVM, if you have not installed the CMSSW area do the following:
-   ```
-   cmsrel CMSSW_5_3_32
-   cd CMSSW_5_3_32/src
-   cmsenv
-   ```
-   This command creates a software skeleton for the CMS analysis software CMSSW.
-   
-   If you already have done this, start directly with:
-   
-   ```
-   cd CMSSW_5_3_32/src
-   cmsenv
-   ```
-
-
    ### Downloading this code
    
-      - download the full git repository, in this case you get the directory structure automatically. For those who want to set things up, there also is a complete tutorial on the CMS Open Data portal that walks you through a full setup including all directory structures. In this tutorial we have done this for you.
+      - download the git repository, in this case you get the directory structure automatically.
+      
+        For those who want to set things up, there also is a complete tutorial on the CMS Open Data portal that walks you through a full setup including all directory structures.
+        
+        In this tutorial we have done this for you.
 
         ```
         git clone https://github.com/cms-opendata-analyses/HiggsExample20112012.git
@@ -148,17 +136,19 @@ There are four levels of increasing complexity for this example:
          ```
          M4Lnormdatall.cc 
          ```
-        this is a root macro that you will run to obtain the plots that were considered in the Level 1 part of this tutorial. Particularly for starting users, it would be useful to study the code of this macro in detail to understand what it does. Very important is that this macro loads the files present in the `rootfiles` directory.
+        this is a root macro that you will run to obtain the plots that were considered in the Level 1 part of this tutorial.
+        Particularly for starting users, it would be useful to study the code of this macro in detail to understand what it does.
+        Very important is that this macro loads the files present in the `HiggsExample20112012/rootfiles` directory, combines this information into a final plot, that the macro will save.
 	 
       ### Running the code
       
-      - on the linux prompt, with ROOT installed, and in the `HiggsExample20112012/Level2`, type
+      - on the linux prompt, with ROOT installed, and in the `HiggsExample20112012/Level2` directory, type
       
          ```
          root -l M4Lnormdatall.cc
          ```
       
-      -> you will get the output plot on the screen
+        -> you will get the output plot on the screen
       - either, on the ROOT canvas (picture) click 
       
          ```
@@ -185,25 +175,35 @@ There are four levels of increasing complexity for this example:
    (~few minutes to ~1 hour if Virtual machine is already installed, 
      depending on internet connection and computer performance, up to 
      ~few hours otherwise)
+     
      ### Prerequisites
     - if not already done follow instructions in
         CMS 2011 Virtual Machines: How to install  
         [http://opendata.web.cern.ch/docs/cms-virtual-machine-2011]
         * install VirtualBox
         * install CERNVM Virtual Machine
-    - in particular, if not yet done, run the Demo program from
-        * Test and Validate
-        (needed by the subsequent program!)
- 
+        * install the CMSSW software environment
+            ```
+            cmsrel CMSSW_5_3_32
+            ```
+           And then move into the working (`src`) directory and setup the computing environment
+        
+            ```
+            cd CMSSW_5_3_32/src
+            cmsenv
+            ```
+            You now have a working ROOT environment and all CMS code framework at your disposal. Next step is to add analysis code.
 
         
     ### Downloading and compiling
-    - If you have not already done so, download and install the code. For this example, all active code and macros are present in the `HiggsExample20112012/Level3` directories. The analysis code in c++ that you will *run* is present in  `HiggsExample20112012/HiggsDemoAnalyzer` directory, and it will need to be compiled. You will also use the files in the `HiggsExample20112012/rootfiles` directory when making the final plot.
+    - If you have not already done so, download and install the code.
     
         ```
-        mkdir WorkDirCMSHiggs
-        cd WorkDirCMSHiggs
+
         git clone https://github.com/cms-opendata-analyses/HiggsExample20112012.git
+        ```
+        For this example, all active code and macros are present in the `HiggsExample20112012/Level3` directories. The analysis code in c++ that you will *run* is present in  `HiggsExample20112012/HiggsDemoAnalyzer` directory, and it will need to be compiled. You will also use the files in the `HiggsExample20112012/rootfiles` directory when making the final plot, similar to the Level2 tutorial.
+        ```
         cd HiggsExample20112012/Level3
         ```
 <!---
