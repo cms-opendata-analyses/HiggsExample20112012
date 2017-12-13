@@ -1,11 +1,11 @@
-# HiggsExample11-12
+# HiggsExample20112012
 adapted for github by F. Blekman
 
-This example guides the user to reproducing the discovery of the Higgs boson using the 2011 and 2012 datasets, in the four-lepton final states. It contains multiple levels of examples, from very simple to a full analysis, all with CMS Open Data.
+This example guides the user to reproducing the discovery of the Higgs boson using the 2011 and 2012 datasets, in the four-lepton final states. It contains multiple levels of examples, from very simple to a full analysis, all with CMS Open Data. This documentation and tutorial can also be found on the CMS opendata portal, in a slightly modified configuration.
 
 # Introduction
 
-authors: N.Z. Jomhari, A. Geiser, A. Anuar 
+authors: N.Z. Jomhari, A. Geiser, A. Anuar.
 
 This research level example is a strongly simplified reimplementation of 
 parts of the original CMS Higgs-to-four-lepton analysis published in
@@ -59,7 +59,7 @@ in the original publication. The difference is attributed to the less
 sophisticated background suppression.
 In more recent (not yet public) CMS data sets with higher statistics the 
 signal is observed in an analysis with more than 5 standard 
-deviations in this channel alone [https://inspirehep.net/record/1518828]. 
+deviations in this channel alone in the preliminary result [CMS-PAS-HIG-16-041 https://inspirehep.net/record/1518828](https://inspirehep.net/record/1518828).
 The most recent results on the search and observation of the Higgs boson 
 in this decay mode are available here: http://cms-results.web.cern.ch/cms-results/public-results/publications/HIG/ZZ.html
 
@@ -83,9 +83,9 @@ There are four levels of increasing complexity for this example:
 ## Level 1 (easy): Compare
 
 1. *Compare* the provided final output plot 
-   [mass4l_combine.pdf](https://raw.githubusercontent.com/cms-opendata-analyses/HiggsExample11-12/master/mass4l_combine.pdf)
+   [mass4l_combine.pdf](https://raw.githubusercontent.com/cms-opendata-analyses/HiggsExample20112012/master/mass4l_combine.pdf)
    or 
-   [mass4l_combine.png](https://raw.githubusercontent.com/cms-opendata-analyses/HiggsExample11-12/master/mass4l_combine.png)
+   [mass4l_combine.png](https://raw.githubusercontent.com/cms-opendata-analyses/HiggsExample20112012/master/mass4l_combine.png)
    to the published one, 
    https://inspirehep.net/record/1124338/files/H4l_mass_v3.png
    keeping in mind the caveats given above 
@@ -95,11 +95,11 @@ There are four levels of increasing complexity for this example:
 2. *Reproduce* the final output plot from the predefined histogram files 
    using a ROOT macro 
    (Time: ~few minutes - ~few hours, depending on setup and proficiency)
-   There are two ways to do this tutorial, with either a local software or virtual installation of the ROOT framework,  very commonly used in particle physics. 
+   There are two ways to do this tutorial, with either a local software or virtual installation of the ROOT framework. ROOT is a software framework very commonly used in particle physics.
    
    If not already proficient in ROOT, consider doing a brief ROOT 
    introductory tutorial [https://root.cern.ch/introductory-tutorials] in order to understand what the ROOT 
-   macro will do 
+   macro will do .
 
    ### With local ROOT installation
    
@@ -109,38 +109,50 @@ There are four levels of increasing complexity for this example:
    ### Without a local ROOT installation
  
    If you do not have ROOT installed, it is also possible to run this part of the tutorial in the CERN Virtual Machine.
-   Follow the instructions of the 2nd item of level 3
-   in order to install the Virtualbox and CERNVM and run ROOT there
-   (the validation step with the Demo example might be skipped) 
-
-   ### Downloading the code
+   Follow the instructions in the Level 3 tutorial in order to install the Virtualbox and CERNVM and run ROOT in the virtual machine [http://opendata.cern.ch/VM/CMS/2011]
    
-      - download the full git repository, in that case you get the directory structure automatically 
+   Once you have opened the CERNVM, if you have not installed the CMSSW area do the following:
+   ```
+   cmsrel CMSSW_5_3_32
+   cd CMSSW_5_3_32/src
+   cmsenv
+   ```
+   This command creates a software skeleton for the CMS analysis software CMSSW.
+   
+   If you already have done this, start directly with:
+   
+   ```
+   cd CMSSW_5_3_32/src
+   cmsenv
+   ```
+
+
+   ### Downloading this code
+   
+      - download the full git repository, in this case you get the directory structure automatically. For those who want to set things up, there also is a complete tutorial on the CMS Open Data portal that walks you through a full setup including all directory structures. In this tutorial we have done this for you.
 
         ```
-        git clone https://github.com/cms-opendata-analyses/HiggsExample11-12.git
-        cd HiggsExample11-12/rootfiles/
+        git clone https://github.com/cms-opendata-analyses/HiggsExample20112012.git
+        cd HiggsExample20112012/
+        ls
         ```
+        What you will see is that there are multiple directories called `Level2`, `Level3`, `Level4`, `rootfiles`, etc.
         
-      - OR create a new directory, e.g. rootfiles and switch to that directory
-      
-        ```      
-        mkdir rootfiles
-        cd rootfiles
-        ```
+        For now we will focus on the `Level2` tutorial.
         
-        and download all the preproduced *.root files given in 
+        The `HiggsExample20112012` package already includes a download of all the preproduced *.root files given in
         [tobereleased] <!--- http://opendata-qa.web.cern.ch/search?page=1&size=20&q=5501 --->
-        for all relevant samples to this directory
-        and download [M4Lnormdatall.cc](https://raw.githubusercontent.com/cms-opendata-analyses/HiggsExample11-12/master/rootfiles/M4Lnormdatall.cc), the ROOT macro to analyse these files and keep it in the same working directory as the *.root files
-      
+        for all relevant samples to the `rootfiles` directory.
+
+	In `HiggsExample20112012/Level2` you find the file
          ```
          M4Lnormdatall.cc 
          ```
-         
-        from this record into the same directory
+        this is a root macro that you will run to obtain the plots that were considered in the Level 1 part of this tutorial. Particularly for starting users, it would be useful to study the code of this macro in detail to understand what it does. Very important is that this macro loads the files present in the `rootfiles` directory.
+	 
       ### Running the code
-      - on the linux prompt, type 
+      
+      - on the linux prompt, with ROOT installed, and in the `HiggsExample20112012/Level2`, type
       
          ```
          root -l M4Lnormdatall.cc
@@ -162,7 +174,7 @@ There are four levels of increasing complexity for this example:
         -> you will exit ROOT and find the output plot in 
            mass4l_combined_user.pdf
            
-      - you can compare this plot with [the plots provided in 1.](https://github.com/cms-opendata-analyses/HiggsExample11-12/blob/master/README.md#level-1-easy-compare)
+      - you can compare this plot with [the plots provided in 1.](https://github.com/cms-opendata-analyses/HiggsExample20112012/blob/master/README.md#level-1-easy-compare)
 
 ## Level 3 (intermediate): Produce
 
@@ -186,15 +198,15 @@ There are four levels of increasing complexity for this example:
 
         
     ### Downloading and compiling
-    - If you have not already done so, download and install the code. For this example, all active code is present in the `HiggsExample11-12/Level3` directory. You will also use the files in the `HiggsExample11-12/rootfiles` directory when making the final plot.
+    - If you have not already done so, download and install the code. For this example, all active code and macros are present in the `HiggsExample20112012/Level3` directories. The analysis code in c++ that you will *run* is present in  `HiggsExample20112012/HiggsDemoAnalyzer` directory, and it will need to be compiled. You will also use the files in the `HiggsExample20112012/rootfiles` directory when making the final plot.
     
         ```
         mkdir WorkDirCMSHiggs
         cd WorkDirCMSHiggs
-        git clone https://github.com/cms-opendata-analyses/HiggsExample11-12.git
-        cd HiggsExample11-12/Level3
+        git clone https://github.com/cms-opendata-analyses/HiggsExample20112012.git
+        cd HiggsExample20112012/Level3
         ```
-        
+<!---
     - you need to replace the build file in the `Demo/DemoAnalyzer` directory (which you should be familiar with from the prerequisites) to include the right dependencies. In addition you should move the analysis source code to the right directory.
         
         - replace BuildFile.xml by the version downloaded from this record
@@ -209,6 +221,8 @@ There are four levels of increasing complexity for this example:
             ```
             scram b
             ```
+            --->
+            
         - Now you should have a working version of the `HiggsDemoAnalyzer` available in your environment. You can check this with the `edmPluginDump` command, or more useful `edmPluginDump | grep HiggsDemoAnalyzer`
     ### Running the example
     - In your `Level3` directory you should see the files `demoanalyzer_cfg_level3data.py` (data example) and `demoanalyzer_cfg_level3MC.py` (Higgs simulation example)
@@ -230,8 +244,8 @@ There are four levels of increasing complexity for this example:
         ```
         will produce output file `Higgs4L1file.root` containing the Higgs signal distributions with reduced statistics
 
-    - Analogous to the [Level 2](https://github.com/cms-opendata-analyses/HiggsExample11-12/blob/master/README.md#level-2-beginner-reproduce) example, you will now use a ROOT macro `M4Lnormdatall_lvl3.cc` to analyse the files in `HiggsExample11-12/rootfiles`. However, besides that, you will add your own one extra data point that you have processed!
-        - on the linux prompt and in your `HiggsExample11-12/Level3` directory, type
+    - Analogous to the [Level 2](https://github.com/cms-opendata-analyses/HiggsExample20112012/blob/master/README.md#level-2-beginner-reproduce) example, you will now use a ROOT macro `M4Lnormdatall_lvl3.cc` to analyse the files in `HiggsExample20112012/rootfiles`. However, besides that, you will add your own one extra data point that you have processed!
+        - on the linux prompt and in your `HiggsExample20112012/Level3` directory, type
         ```
         root -l M4Lnormdatall_lvl3.cc
         ```
@@ -248,7 +262,7 @@ There are four levels of increasing complexity for this example:
         -> you will exit ROOT and find the output plot in
         mass4l_combined_user3.pdf
         
-    - you can compare this plot with [the plots provided in the Level 1 tutorial.](https://github.com/cms-opendata-analyses/HiggsExample11-12/blob/master/README.md#level-1-easy-compare)
+    - you can compare this plot with [the plots provided in the Level 1 tutorial.](https://github.com/cms-opendata-analyses/HiggsExample20112012/blob/master/README.md#level-1-easy-compare)
 
 <!----
 ## Level 4 (advanced): Full analysis
@@ -305,10 +319,7 @@ For this example, you need to create an additional directory, you can call it `W
 Go to this directory, and download the example code from git. This repository contains the various examples.
 
 ```
-
-mkdir WorkDirCMSHiggs
-cd WorkDirCMSHiggs
-git clone https://github.com/cms-opendata-analyses/HiggsExample11-12.git
+git clone https://github.com/cms-opendata-analyses/HiggsExample20112012.git
 
 ```
 And then follow the instructions above.
@@ -324,10 +335,10 @@ cd DemoAnalyzer
 scram b
 cd $CMSSW_BASE
 ```
-You need to move some files around for the Level 3 version of the tutorial, here again it is assumed you installed in a directory `WorkDirCMSHiggs`.
+You need to move some files around for the Level 3 version of the tutorial, here again it is assumed you installed in a directory
 ```
 cd $CMSSW_BASE
-cp WorkDirCMSHiggs/HiggsExample11-12/Level3/BuildFile.xml Demo/DemoAnalyzer/.
-cp WorkDirCMSHiggs/HiggsExample11-12/Level3/HiggsDemoAnalyzer.cc Demo/DemoAnalyzer/src/.
+cp HiggsExample20112012/Level3/BuildFile.xml Demo/DemoAnalyzer/.
+cp HiggsExample20112012/Level3/HiggsDemoAnalyzer.cc Demo/DemoAnalyzer/src/.
 scram b
 ```
