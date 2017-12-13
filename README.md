@@ -273,10 +273,7 @@ There are four levels of increasing complexity for this example:
     depending on internet connection speed and computer performance)
     
 - start by running the Level 3 and understand what you have done
-- the Level 4 tutorial has very similar structure as the Level 3 tutorial. The analysis control files are present in the 
-```
-HiggsExample20112012/Level4 
-```directory, and allow running over full data samples.
+- the Level 4 tutorial has very similar structure as the Level 3 tutorial. The analysis control files are present in the  `HiggsExample20112012/Level4` and allow to run over full datasets of millions of LHC data and simulation events.
 - at this level, instead of running over a single file, you will run
         over so-called index files which contain lists (`chains`) of many files
 - the data index files for the datasets listed in
