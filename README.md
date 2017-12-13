@@ -235,7 +235,7 @@ There are four levels of increasing complexity for this example:
         ```
         will produce output file `Higgs4L1file.root` containing the Higgs signal distributions with reduced statistics
 
-    - Analogous to the [Level 2](https://github.com/cms-opendata-analyses/HiggsExample20112012/blob/master/README.md#level-2-beginner-reproduce) example, you will now use a ROOT macro `M4Lnormdatall_lvl3.cc` to analyse the files in `rootfiles`. However, besides that, you will add your own one extra data point that you have processed, which is loaded from the histograms in the `level2` directory!
+    - Analogous to the [Level 2](https://github.com/cms-opendata-analyses/HiggsExample20112012/blob/master/README.md#level-2-beginner-reproduce) example, you will now use a ROOT macro `M4Lnormdatall_lvl3.cc` to analyse the files in `rootfiles`. However, besides that, you will add your own one extra data point that you have processed, and the higgs boson signal histogram, which both are loaded from the histograms in the `level2` directory!
         - it is worthwhile to take a look at the  `M4Lnormdatall_lvl3.cc` macro, you can identify where the files are loaded and paths are set.
     - on the linux prompt and in your `HiggsExample20112012/Level3` directory, type
         ```
