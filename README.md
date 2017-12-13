@@ -303,7 +303,7 @@ There are four levels of increasing complexity for this example:
 - merge all the files from different index files of a dataset by using
         ROOT tools . For example the `hadd` command allows you to merge root files. If you move all files into a single directory and use the same naming convention as in `datafiles` it should only be a straightforward modification of the path at the start of the Level 2 macros that would allow you to run.
 - You can then repeat the Level 2 part of this exercise, using your own ROOT output files instead of the predefined
-        ones
+        ones. Or plot whatever properties you want after modifying the macros! Enjoy!
 
 <!---
 # Setup instructions for the impatient
