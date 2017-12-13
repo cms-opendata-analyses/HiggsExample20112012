@@ -1,7 +1,15 @@
 # HiggsExample20112012
 adapted for github by F. Blekman
 
-This example guides the user to reproducing the discovery of the Higgs boson using the 2011 and 2012 datasets, in the four-lepton final states. It contains multiple levels of examples, from very simple to a full analysis, all with CMS Open Data. This documentation and tutorial can also be found on the CMS opendata portal, in a slightly modified configuration.
+This example guides the user to reproducing the discovery of the Higgs boson using the 2011 and 2012 datasets, in the four-lepton final states. It contains multiple levels of examples, from very simple to a full analysis, all with CMS Open Data. 
+
+This documentation and tutorial can also be found on the CMS opendata portal, in a slightly modified configuration.
+It is based on the original code in [http://opendata.cern.ch/record/5001] on the CERN Open Data portal (Geiser, Achim. Dutta, Irene. Hirvonsalo, Harri. Sheeran, Bridget. (2017). Example code to produce the di-muon spectrum from a CMS 2011 primary dataset. CERN Open Data Portal. DOI: 10.7483/OPENDATA.CMS.D00J.UVB1) and modified here for direct download from github.
+
+The major modifications with respect to the original code are the following:
+
+the class name has been changed from in order to avoid conflict for any existing DemoAnalyzer plugins in the working area
+the file paths have been modified to be relative in the configuration files, i.e. they point to the datasets directory, which is under the directory from where there program will be run. The different level examples have been moved to separate directories.
 
 # Introduction
 
@@ -291,7 +299,7 @@ There are four levels of increasing complexity for this example:
         up the result.
         
 - merge all the files from different index files of a dataset by using
-        ROOT tools . For example the `hadd` command allows you to merge root files and move all files into a single directory.
+        ROOT tools . For example the `hadd` command allows you to merge root files. If you move all files into a single directory and use the same naming convention as in `datafiles` it should only be a straightforward modification of the path at the start of the Level 2 macros that would allow you to run.
 - You can then repeat the Level 2 part of this exercise, using your own ROOT output files instead of the predefined
         ones
 
