@@ -223,7 +223,7 @@ There are four levels of increasing complexity for this example:
         scram b
         ```
         
-    - Now you should have a working version of the `HiggsDemoAnalyzer` available in your environment. You can check this with the `edmPluginDump` command, or more useful `edmPluginDump | grep HiggsDemoAnalyzer`
+    - Now you should have a working version of the `HiggsDemoAnalyzer` available in your environment. You can check this with the `edmPluginDump` command, or more useful `edmPluginDump | grep HiggsDemoAnalyzer`. You should see a printout of the HiggsDemoAnlyzer name twice.
     
     ### Running the example
     - In your `HiggsExample20112012/Level3` directory you should see the files `demoanalyzer_cfg_level3data.py` (data example) and `demoanalyzer_cfg_level3MC.py` (Higgs simulation example)
