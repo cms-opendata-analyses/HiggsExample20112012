@@ -273,8 +273,13 @@ There are four levels of increasing complexity for this example:
     depending on internet connection speed and computer performance)
     
 - start by running the Level 3 and understand what you have done
+- the Level 4 tutorial has very similar structure as the Level 3 tutorial. The analysis control files are present in the 
+```
+HiggsExample20112012/Level4 
+```
+  directory, and allow running over full data samples.
 - at this level, instead of running over a single file, you will run
-        over so-called index files which contain chains of many files
+        over so-called index files which contain lists (`chains`) of many files
 - the data index files for the datasets listed in
         List_indexfile.txt to the datasets directory
 - the 2011 validation (JSON) file is present in the datasets directory
