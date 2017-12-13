@@ -38,7 +38,7 @@ void M4Lnormdatall() {
   TH1::SetDefaultSumw2(kTRUE);
   
   // Input file directory
-  string inDir = "./";  
+  string inDir = "../rootfiles/";  
   // Output file directory
   string outDir = "./";
 
