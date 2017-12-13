@@ -268,10 +268,10 @@ There are four levels of increasing complexity for this example:
         over so-called index files which contain chains of many files
 - the data index files for the datasets listed in
         List_indexfile.txt to the datasets directory
-- download the 2011 validation (JSON) file to the datasets directory
+- the 2011 validation (JSON) file is present in the datasets directory
         (in which you should already have the 2012 one)
 - download all the MC index files for the MC sets listed in
-        List_indexfile.txt to the MCsets directory (after having created it)
+        List_indexfile.txt to the datasets directory (or create a dedicated directory for them)
 - edit the relevant demoanalyzer file and insert the index file you
         want; for data, make sure to use the correct JSON validation file
         in each case; set an outputfile name of your choice for each smaple 
