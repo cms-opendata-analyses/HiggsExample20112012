@@ -256,41 +256,42 @@ There are four levels of increasing complexity for this example:
         
     - you can compare this plot with [the plots provided in the Level 1 tutorial.](https://github.com/cms-opendata-analyses/HiggsExample20112012/blob/master/README.md#level-1-easy-compare)
 
-<!----
+
 ## Level 4 (advanced): Full analysis
 
 4. Reproduce the full example analysis 
    (up to ~1 month or more on single CPU with fast internet connection, 
     depending on internet connection speed and computer performance)
-      - start by running level 3 and understand what you have done
-      - download demoanalyzer_cfg_level4data.py and 
-        demoanalyzer_cfg_level4MC.py 
-      - at this level, instead of running over a single file, you will run 
-        over so-called index files which contain chains of files
-      - download all the data index files for the datasets listed in 
+    
+- start by running the Level 3 and understand what you have done
+- at this level, instead of running over a single file, you will run
+        over so-called index files which contain chains of many files
+- the data index files for the datasets listed in
         List_indexfile.txt to the datasets directory
-      - download the 2011 validation (JSON) file to the datasets directory
+- download the 2011 validation (JSON) file to the datasets directory
         (in which you should already have the 2012 one)
-      - download all the MC index files for the MC sets listed in 
+- download all the MC index files for the MC sets listed in
         List_indexfile.txt to the MCsets directory (after having created it)
-      - edit the relevant demoanalyzer file and insert the index file you 
+- edit the relevant demoanalyzer file and insert the index file you
         want; for data, make sure to use the correct JSON validation file
         in each case; set an outputfile name of your choice for each smaple 
         which you will recognise 
-      - run the analysis job (cmsRun demoanalyzer_cfg_level4...) sequentially 
+- run the analysis job (cmsRun demoanalyzer_cfg_level4...) sequentially
         on all the input samples listed in List_indexfile.txt, i.e. produce 
         all root output files yourself.
-        If you have access to a computer farm with local support for the 
+       
+    If you have access to a computer farm with local support for the
         installation of the CMS software (the Open Data team can only provide 
         support for the single virtual machine mode), you may also run 
         the analysis in parallel on different CPUs, correspondingly speeding 
-        up the result. 
-      - merge all the files from different index files of a dataset by using
-        ROOT tools   
-      - go to 2., using your own Root output files instead of the predefined 
+        up the result.
+        
+    - merge all the files from different index files of a dataset by using
+        ROOT tools . For example the `hadd` command allows you to merge root files and move all files into a single directory.
+    - You can then repeat the Level 2 part of this exercise, using your own ROOT output files instead of the predefined
         ones
---->
 
+<!---
 # Setup instructions for the impatient
 
 Run this code in CMS Open Data VM [http://opendata.cern.ch/VM/CMS/2011]
@@ -334,3 +335,4 @@ cp HiggsExample20112012/Level3/BuildFile.xml Demo/DemoAnalyzer/.
 cp HiggsExample20112012/Level3/HiggsDemoAnalyzer.cc Demo/DemoAnalyzer/src/.
 scram b
 ```
+--->
