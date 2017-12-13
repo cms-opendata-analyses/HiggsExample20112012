@@ -191,9 +191,11 @@ There are four levels of increasing complexity for this example:
         * install VirtualBox
         * install CERNVM Virtual Machine
     - install the CMSSW software environment
+    
             ```
             cmsrel CMSSW_5_3_32
             ```
+	    
            And then move into the working (`src`) directory and setup the computing environment
         
             ```
