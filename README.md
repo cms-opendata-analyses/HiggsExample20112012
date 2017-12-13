@@ -4,12 +4,12 @@ adapted for github by F. Blekman
 This example guides the user to reproducing the discovery of the Higgs boson using the 2011 and 2012 datasets, in the four-lepton final states. It contains multiple levels of examples, from very simple to a full analysis, all with CMS Open Data. 
 
 This documentation and tutorial can also be found on the CMS opendata portal, in a slightly modified configuration.
-It is based on the original code in [http://opendata.cern.ch/record/5001] on the CERN Open Data portal (Geiser, Achim. Dutta, Irene. Hirvonsalo, Harri. Sheeran, Bridget. (2017). Example code to produce the di-muon spectrum from a CMS 2011 primary dataset. CERN Open Data Portal. DOI: 10.7483/OPENDATA.CMS.D00J.UVB1) and modified here for direct download from github.
+It is based on the original code in [http://opendata.cern.ch/record/5500] on the CERN Open Data portal (Jomhari, Nur Zulaiha. Geiser, Achim. Bin Anuar, Afiq Aizuddin. (2017). Higgs-to-four-lepton analysis example using 2011-2012 data. CERN Open Data Portal. DOI: 10.7483/OPENDATA.CMS.JKB8.RR42) and modified here for direct download from github.
 
 The major modifications with respect to the original code are the following:
-
-the class name has been changed from in order to avoid conflict for any existing DemoAnalyzer plugins in the working area
-the file paths have been modified to be relative in the configuration files, i.e. they point to the datasets directory, which is under the directory from where there program will be run. The different level examples have been moved to separate directories.
+* The class name has been changed from in order to avoid conflict for any new or existing plugins in the working area.
+* The different level examples have been moved to separate directories.
+* The file paths have been modified to be relative in the configuration files, i.e. they point to the datasets directory, which is under the directory from where there program will be run. 
 
 # Introduction
 
