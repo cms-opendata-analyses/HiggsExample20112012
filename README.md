@@ -349,3 +349,6 @@ cp HiggsExample20112012/Level3/HiggsDemoAnalyzer.cc Demo/DemoAnalyzer/src/.
 scram b
 ```
 --->
+# Acknowledgements
+
+FB would like to thank ATLAS colleagues C. Nellist and A. Elliot for their valuable time to test this tutorial.
