@@ -192,17 +192,16 @@ There are four levels of increasing complexity for this example:
         * install CERNVM Virtual Machine
     - install the CMSSW software environment
     
-            ```
-            cmsrel CMSSW_5_3_32
-            ```
+      ```
+      cmsrel CMSSW_5_3_32
+      ```
 	    
-           And then move into the working (`src`) directory and setup the computing environment
-        
-            ```
-            cd CMSSW_5_3_32/src
-            cmsenv
-            ```
-            You now have a working ROOT environment and all CMS code framework at your disposal. Next step is to add analysis code.
+      And then move into the working (`src`) directory and setup the computing environment
+      ```
+      cd CMSSW_5_3_32/src
+      cmsenv
+      ```
+      You now have a working ROOT environment and all CMS code framework at your disposal. Next step is to add analysis code.
     - optional: for better understanding of the code used in the following steps, it is highly recommended to also work through the *Test & Validate* section of the [http://opendata.web.cern.ch/docs/cms-virtual-machine-2011] instructions.
         
     ### Downloading and compiling
