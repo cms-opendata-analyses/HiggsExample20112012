@@ -275,7 +275,10 @@ There are four levels of increasing complexity for this example:
 - edit the relevant demoanalyzer file and insert the index file you
         want; for data, make sure to use the correct JSON validation file
         in each case; set an outputfile name of your choice for each smaple 
-        which you will recognise 
+        which you will recognise. Important:
+        * modify input file
+        * modify name output file
+        * if the input file is data, you need to use the validation (JSON) file appropriate to the run period, so either 2011 or 2012.
 - run the analysis job (cmsRun demoanalyzer_cfg_level4...) sequentially
         on all the input samples listed in List_indexfile.txt, i.e. produce 
         all root output files yourself.
