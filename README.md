@@ -137,8 +137,8 @@ There are four levels of increasing complexity for this example:
         For now we will focus on the `Level2` tutorial.
         
         The `HiggsExample20112012` package already includes a download of all the preproduced *.root files given in
-        [tobereleased] <!--- http://opendata-qa.web.cern.ch/search?page=1&size=20&q=5501 --->
-        for all relevant samples to the `rootfiles` directory.
+        [tobereleased](http://opendata-dev.web.cern.ch/record/5501)
+        for all relevant samples to the `rootfiles` directory, so this saves you the exercise of downloading all of these.
 
 	In `HiggsExample20112012/Level2` you find the file
          ```
