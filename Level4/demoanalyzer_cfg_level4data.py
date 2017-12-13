@@ -24,7 +24,7 @@ process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(-1) )
 # set the number of events to be skipped (if any) at end of file below
 
 # define JSON file for 2012 data
-goodJSON = '..//datasets/Cert_190456-208686_8TeV_22Jan2013ReReco_Collisions12_JSON.txt'
+goodJSON = '../datasets/Cert_190456-208686_8TeV_22Jan2013ReReco_Collisions12_JSON.txt'
 
 myLumis = LumiList.LumiList(filename = goodJSON).getCMSSWString().split(',')
 
@@ -41,7 +41,7 @@ import FWCore.Utilities.FileUtils as FileUtils
 #
 # use the following if you want to run over a full index file
 # *** DoubleMuParked2012C_10000 data set (many million events) ***
-files2012data = FileUtils.loadListFromFile ('/home/cms-opendata/CMSSW_5_3_32/src/Demo/DemoAnalyzer/datasets/CMS_Run2012C_DoubleMuParked_AOD_22Jan2013-v1_10000_file_index.txt')
+files2012data = FileUtils.loadListFromFile ('../datasets/CMS_Run2012C_DoubleMuParked_AOD_22Jan2013-v1_10000_file_index.txt')
 process.source = cms.Source("PoolSource",
     fileNames = cms.untracked.vstring(*files2012data    
     )    
