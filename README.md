@@ -351,4 +351,4 @@ scram b
 --->
 # Acknowledgements
 
-FB would like to thank ATLAS colleagues C. Nellist and A. Elliot for their valuable time to test this tutorial.
+FB would like to thank ATLAS colleagues [C. Nellist](https://inspirehep.net/author/profile/C.Nellist.1) and [A. Elliot](https://inspirehep.net/author/profile/A.Elliot.1) for their valuable time and help to test this tutorial.
