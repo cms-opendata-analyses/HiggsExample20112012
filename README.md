@@ -276,8 +276,7 @@ There are four levels of increasing complexity for this example:
 - the Level 4 tutorial has very similar structure as the Level 3 tutorial. The analysis control files are present in the 
 ```
 HiggsExample20112012/Level4 
-```
-    directory, and allow running over full data samples.
+```directory, and allow running over full data samples.
 - at this level, instead of running over a single file, you will run
         over so-called index files which contain lists (`chains`) of many files
 - the data index files for the datasets listed in
