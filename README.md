@@ -176,7 +176,7 @@ There are four levels of increasing complexity for this example:
      depending on internet connection and computer performance, up to 
      ~few hours otherwise)
      
-     ### Prerequisites
+     ### Prerequisites and setting up the environment
     - if not already done follow instructions in
         CMS 2011 Virtual Machines: How to install  
         [http://opendata.web.cern.ch/docs/cms-virtual-machine-2011]
@@ -193,47 +193,38 @@ There are four levels of increasing complexity for this example:
             cmsenv
             ```
             You now have a working ROOT environment and all CMS code framework at your disposal. Next step is to add analysis code.
-
+        - optional: for better understanding of the code used in the following steps, it is highly recommended to also work through the *Test & Validate* section of the [http://opendata.web.cern.ch/docs/cms-virtual-machine-2011] instructions.
         
     ### Downloading and compiling
+    
     - If you have not already done so, download and install the code.
     
         ```
 
         git clone https://github.com/cms-opendata-analyses/HiggsExample20112012.git
         ```
-        For this example, all active code and macros are present in the `HiggsExample20112012/Level3` directories. The analysis code in c++ that you will *run* is present in  `HiggsExample20112012/HiggsDemoAnalyzer` directory, and it will need to be compiled. You will also use the files in the `HiggsExample20112012/rootfiles` directory when making the final plot, similar to the Level2 tutorial.
+    - For this example, all active code and macros are present in the `HiggsExample20112012/Level3` directories. The analysis code in c++ that you will *run* is present in  `HiggsExample20112012/HiggsDemoAnalyzer` directory, and it will need to be compiled. You will also use the files in the `HiggsExample20112012/rootfiles` directory when making the final plot, similar to the Level2 tutorial.
         ```
-        cd HiggsExample20112012/Level3
+        cd HiggsExample20112012/HiggsDemoAnalyzer
         ```
-<!---
-    - you need to replace the build file in the `Demo/DemoAnalyzer` directory (which you should be familiar with from the prerequisites) to include the right dependencies. In addition you should move the analysis source code to the right directory.
         
-        - replace BuildFile.xml by the version downloaded from this record
-            ```
-            cp BuildFile.xml $CMSSW_BASE/Demo/DemoAnalyzer/.
-            ```
-        - copy HiggsDemoAnalyzer.cc from this record to the /src subdirectory
-            ```
-            cp HiggsDemoAnalyzer.cc $CMSSW_BASE/Demo/DemoAnalyzer/src/.
-            ```
-        - recompile
-            ```
-            scram b
-            ```
-            --->
-            
-        - Now you should have a working version of the `HiggsDemoAnalyzer` available in your environment. You can check this with the `edmPluginDump` command, or more useful `edmPluginDump | grep HiggsDemoAnalyzer`
+    - The code in this directory calls analysis code that is very similar to the one used in the `Demo/DemoAnalyzer` tutorial (which you should be familiar with from the [http://opendata.web.cern.ch/docs/cms-virtual-machine-2011] tutorials). To compile the code you type
+        
+        ```
+        scram b
+        ```
+        
+    - Now you should have a working version of the `HiggsDemoAnalyzer` available in your environment. You can check this with the `edmPluginDump` command, or more useful `edmPluginDump | grep HiggsDemoAnalyzer`
+    
     ### Running the example
-    - In your `Level3` directory you should see the files `demoanalyzer_cfg_level3data.py` (data example) and `demoanalyzer_cfg_level3MC.py` (Higgs simulation example)
-    - create datasets directory if not yet existing
-      ```
-      mkdir $CMSSW_BASE/Demo/DemoAnalyzer/datasets
-      ```
-    - The data conditions when the CMS detector was of high enough quality is stored in files of the json format. You can download the 2012 validation file from [http://opendata.web.cern.ch/record/1002], it should be copied to the `Demo/DemoAnalyzer/datasets` directory. In the same link there also are details on how the good-data selection is made.
-      ```
-      wget http://opendata.web.cern.ch/record/1002/files/Cert_190456-208686_8TeV_22Jan2013ReReco_Collisions12_JSON.txt $CMSSW_BASE/Demo/DemoAnalyzer/datasets/.
-      ```
+    - In your `HiggsExample20112012/Level3` directory you should see the files `demoanalyzer_cfg_level3data.py` (data example) and `demoanalyzer_cfg_level3MC.py` (Higgs simulation example)
+    ```
+    # from HiggsExample20112012/HiggsDemoAnalyzer
+    cd ../Level3
+    ls
+    ```
+    - The data conditions when the CMS detector was of high enough quality is stored in files of the json format. You can download the 2012 validation file from [http://opendata.web.cern.ch/record/1002], in the same link there also are details on how the good-data selection is made. In this example has been copied to the repository, it is the file `datasets/Cert_190456-208686_8TeV_22Jan2013ReReco_Collisions12_JSON.txt`.
+
     - run the two analysis jobs (one on data, one on MC, the input files are already predefined)
         ```
         cmsRun demoanalyzer_cfg_level3data.py
