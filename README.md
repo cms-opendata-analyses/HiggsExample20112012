@@ -223,7 +223,7 @@ There are four levels of increasing complexity for this example:
         cd ../Level3
         ls
         ```
-    - The data conditions when the CMS detector was of high enough quality is stored in files of the json format. You can download the 2012 validation file from [http://opendata.web.cern.ch/record/1002], in the same link there also are details on how the good-data selection is made. In this example the file has already been copied to the repository, it is the file `datasets/Cert_190456-208686_8TeV_22Jan2013ReReco_Collisions12_JSON.txt`.
+    - The data conditions when the CMS detector was taking data of high enough quality are stored in files of the json format. You can download the 2012 validation file from [http://opendata.web.cern.ch/record/1002], in the same link there also are details on how the good-data selection is made. In this example the file has already been copied to the repository, it is the file `datasets/Cert_190456-208686_8TeV_22Jan2013ReReco_Collisions12_JSON.txt`.
 
     - run the two analysis jobs (one on data, one on MC, the input files are already predefined)
         ```
