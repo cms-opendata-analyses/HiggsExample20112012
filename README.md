@@ -7,7 +7,7 @@ This documentation and tutorial can also be found on the CMS opendata portal, in
 It is based on the original code in [http://opendata.cern.ch/record/5500] on the CERN Open Data portal (Jomhari, Nur Zulaiha. Geiser, Achim. Bin Anuar, Afiq Aizuddin. (2017). Higgs-to-four-lepton analysis example using 2011-2012 data. CERN Open Data Portal. DOI: 10.7483/OPENDATA.CMS.JKB8.RR42) and modified here for direct download from github.
 
 The major modifications with respect to the original code are the following:
-* The class name of the analysis class has been changed in order to avoid conflict for any new or existing plugins in the working area.
+* The location of the analysis class has been changed in order to avoid conflict for any new or existing plugins in the working area.
 * The different level examples have been moved to separate directories.
 * The file paths have been modified to be relative in the configuration files, i.e. they point to the datasets directory, which is under the directory from where there program will be run. 
 
