@@ -223,7 +223,7 @@ There are four levels of increasing complexity for this example:
         scram b
         ```
         
-    - Now you should have a working version of the `HiggsDemoAnalyzer` available in your environment. You can check this with the `edmPluginDump` command, or more useful `edmPluginDump | grep HiggsDemoAnalyzer`. You should see a printout of the HiggsDemoAnlyzer name twice.
+    - Now you should have a working version of the `HiggsDemoAnalyzer` available in your environment. You can check this with the `edmPluginDump` command, or more useful `edmPluginDump | grep HiggsDemoAnalyzer`. You should see a printout of the HiggsDemoAnalyzerGit name twice.
     
     ### Running the example
     - In your `HiggsExample20112012/Level3` directory you should see the files `demoanalyzer_cfg_level3data.py` (data example) and `demoanalyzer_cfg_level3MC.py` (Higgs simulation example)
@@ -277,7 +277,7 @@ There are four levels of increasing complexity for this example:
 - at this level, instead of running over a single file, you will run
         over so-called index files which contain lists (`chains`) of many files
 - the data index files for the datasets listed in
-        List_indexfile.txt to the datasets directory
+        List_indexfile.txt to the datasets directory, which you have to download from the CMS data portal
 - the 2011 validation (JSON) file is present in the datasets directory
         (in which you should already have the 2012 one)
 - download all the MC index files for the MC sets listed in
@@ -305,51 +305,6 @@ There are four levels of increasing complexity for this example:
 - You can then repeat the Level 2 part of this exercise, using your own ROOT output files instead of the predefined
         ones. Or plot whatever properties you want after modifying the macros! Enjoy!
 
-<!---
-# Setup instructions for the impatient
-
-Run this code in CMS Open Data VM [http://opendata.cern.ch/VM/CMS/2011]
-
-If you have not installed the CMSSW area do the following:
-```
-cmsrel CMSSW_5_3_32
-```
-If you already have, start directly with:
-
-```
-cd CMSSW_5_3_32/src
-cmsenv
-```
-
-
-For this example, you need to create an additional directory, you can call it `WorkDirCMSHiggs` or choose another name.
-Go to this directory, and download the example code from git. This repository contains the various examples.
-
-```
-git clone https://github.com/cms-opendata-analyses/HiggsExample20112012.git
-
-```
-And then follow the instructions above.
-
-If you are going to do the more advanced (Level 3/4) tutorials, you also need to make a demo analyser and compile it
-
-```
-cd $CMSSW_BASE
-mkdir Demo
-cd Demo
-mkedanlzr DemoAnalyzer
-cd DemoAnalyzer 
-scram b
-cd $CMSSW_BASE
-```
-You need to move some files around for the Level 3 version of the tutorial, here again it is assumed you installed in a directory
-```
-cd $CMSSW_BASE
-cp HiggsExample20112012/Level3/BuildFile.xml Demo/DemoAnalyzer/.
-cp HiggsExample20112012/Level3/HiggsDemoAnalyzer.cc Demo/DemoAnalyzer/src/.
-scram b
-```
---->
 # Acknowledgements
 
 FB would like to thank ATLAS colleagues [C. Nellist](https://inspirehep.net/author/profile/C.Nellist.1) and [A. Elliot](https://inspirehep.net/author/profile/A.Elliot.1) for their valuable time and help to test this tutorial.
