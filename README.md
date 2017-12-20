@@ -1,5 +1,5 @@
 # HiggsExample20112012
-adapted for github by F. Blekman
+adapted for github by [F. Blekman](http://we.vub.ac.be/freya-blekman), [@freyablekman](https://twitter.com/freyablekman)
 
 This example guides the user to reproducing the discovery of the Higgs boson using the 2011 and 2012 datasets, in the four-lepton final states. It contains multiple levels of examples, from very simple to a full analysis, all with CMS Open Data. 
 
