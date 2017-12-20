@@ -277,7 +277,7 @@ There are four levels of increasing complexity for this example:
 - at this level, instead of running over a single file, you will run
         over so-called index files which contain lists (`chains`) of many files
 - the data index files for the datasets listed in
-        List_indexfile.txt to the datasets directory, which you have to download from the CMS data portal
+        List_indexfile.txt to the datasets directory, which you have to download from the CMS data portal http://opendata.cern.ch/record/5500. The data configuration file should run out of the box.
 - the 2011 validation (JSON) file is present in the datasets directory
         (in which you should already have the 2012 one)
 - download all the MC index files for the MC sets listed in
