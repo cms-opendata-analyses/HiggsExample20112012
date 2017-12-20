@@ -4,10 +4,10 @@ adapted for github by F. Blekman
 This example guides the user to reproducing the discovery of the Higgs boson using the 2011 and 2012 datasets, in the four-lepton final states. It contains multiple levels of examples, from very simple to a full analysis, all with CMS Open Data. 
 
 This documentation and tutorial can also be found on the CMS opendata portal, in a slightly modified configuration.
-It is based on the original code in [http://opendata.cern.ch/record/5500] on the CERN Open Data portal (Jomhari, Nur Zulaiha. Geiser, Achim. Bin Anuar, Afiq Aizuddin. (2017). Higgs-to-four-lepton analysis example using 2011-2012 data. CERN Open Data Portal. DOI: 10.7483/OPENDATA.CMS.JKB8.RR42) and modified here for direct download from github.
+It is based on the original code in [http://opendata.cern.ch/record/5500] on the CERN Open Data portal (Jomhari, Nur Zulaiha; Geiser, Achim; Bin Anuar, Afiq Aizuddin; (2017). Higgs-to-four-lepton analysis example using 2011-2012 data. CERN Open Data Portal. DOI:10.7483/OPENDATA.CMS.JKB8.RR42) and modified here for direct download from github.
 
 The major modifications with respect to the original code are the following:
-* The location of the analysis class has been changed in order to avoid conflict for any new or existing plugins in the working area.
+* The location of the analysis class has been changed in order to avoid conflict for any new or existing plugins in the working area. The analysis class was also renamed to avoid possible naming conflicts.
 * The different level examples have been moved to separate directories.
 * The file paths have been modified to be relative in the configuration files, i.e. they point to the datasets directory, which is under the directory from where there program will be run. 
 
@@ -277,7 +277,7 @@ There are four levels of increasing complexity for this example:
 - at this level, instead of running over a single file, you will run
         over so-called index files which contain lists (`chains`) of many files
 - the data index files for the datasets listed in
-        List_indexfile.txt to the datasets directory, which you have to download from the CMS data portal
+        List_indexfile.txt to the datasets directory, which you have to download from the CMS data portal http://opendata.cern.ch/record/5500. The data configuration file should run out of the box.
 - the 2011 validation (JSON) file is present in the datasets directory
         (in which you should already have the 2012 one)
 - download all the MC index files for the MC sets listed in
