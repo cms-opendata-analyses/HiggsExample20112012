@@ -64,7 +64,7 @@ process.source = cms.Source("PoolSource",
 process.source.skipEvents = cms.untracked.uint32(0)
 
 
-process.demo = cms.EDAnalyzer('HiggsDemoAnalyzer'
+process.demo = cms.EDAnalyzer('HiggsDemoAnalyzerGit'
 )
 # ***********************************************************
 # output file name                                          *
