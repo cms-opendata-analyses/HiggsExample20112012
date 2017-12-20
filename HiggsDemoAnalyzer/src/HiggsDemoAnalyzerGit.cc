@@ -124,10 +124,10 @@
 #include "DataFormats/ParticleFlowCandidate/interface/PFCandidateFwd.h"
 
 // class declaration
-class HiggsDemoAnalyzer: public edm::EDAnalyzer {
+class HiggsDemoAnalyzerGit: public edm::EDAnalyzer {
 public:
-  explicit HiggsDemoAnalyzer(const edm::ParameterSet&);
-  ~HiggsDemoAnalyzer();
+  explicit HiggsDemoAnalyzerGit(const edm::ParameterSet&);
+  ~HiggsDemoAnalyzerGit();
 
 private:
   virtual void beginJob();
@@ -357,7 +357,7 @@ private:
 // constructors and destructor
 //
 
-HiggsDemoAnalyzer::HiggsDemoAnalyzer(const edm::ParameterSet& iConfig) {
+HiggsDemoAnalyzerGit::HiggsDemoAnalyzerGit(const edm::ParameterSet& iConfig) {
 
   // *****************************************************************
   // This is the main analysis routine
@@ -879,7 +879,7 @@ HiggsDemoAnalyzer::HiggsDemoAnalyzer(const edm::ParameterSet& iConfig) {
 
 }
 
-HiggsDemoAnalyzer::~HiggsDemoAnalyzer() {
+HiggsDemoAnalyzerGit::~HiggsDemoAnalyzerGit() {
   //do anything here that needs to be done at destruction time
   // (e.g. close files, deallocate resources etc.)
 }
@@ -889,7 +889,7 @@ HiggsDemoAnalyzer::~HiggsDemoAnalyzer() {
 //
 
 // ------------ method called for each event  ------------//
-void HiggsDemoAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup) {
+void HiggsDemoAnalyzerGit::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup) {
 
 // **********************************************
 // here each relevant event will get analyzed 
@@ -2271,12 +2271,12 @@ void HiggsDemoAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup&
 
   //============================= ZZ/ZZ*To2mu2e end ============================//
   
-} // HiggsDemoAnalyzer::analyze ends
+} // HiggsDemoAnalyzerGit::analyze ends
 
 
 // ------ method called once each job just before starting event loop ---------//
 
-void HiggsDemoAnalyzer::beginJob() {
+void HiggsDemoAnalyzerGit::beginJob() {
 
   // *******************************************************
   // book the ntuple for the surviving 4 lepton candidates *
@@ -2460,9 +2460,9 @@ void HiggsDemoAnalyzer::beginJob() {
 }
 
 // ------------ method called once each job just after ending the event loop  ------------
-void HiggsDemoAnalyzer::endJob() {
+void HiggsDemoAnalyzerGit::endJob() {
 }
 
 //define this as a plug-in
-DEFINE_FWK_MODULE(HiggsDemoAnalyzer);
+DEFINE_FWK_MODULE(HiggsDemoAnalyzerGit);
 
