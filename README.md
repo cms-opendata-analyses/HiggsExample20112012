@@ -277,11 +277,11 @@ There are four levels of increasing complexity for this example:
 - at this level, instead of running over a single file, you will run
         over so-called index files which contain lists (`chains`) of many files
 - the data index files for the datasets listed in
-        List_indexfile.txt to the datasets directory, which you have to download from the CMS data portal http://opendata.cern.ch/record/5500. The data configuration file should run out of the box.
+        List_indexfile.txt to the datasets directory, which you have to download from the CMS data portal http://opendata.cern.ch/record/5500. The configuration files should run out of the box on a dataset and a Monte-Carlo simulation file, in this case ZZ boson production, one of the main backgrounds in the plots, the light-blue one.
 - the 2011 validation (JSON) file is present in the datasets directory
         (in which you should already have the 2012 one)
 - download all the MC index files for the MC sets listed in
-        List_indexfile.txt to the datasets directory (or create a dedicated directory for them)
+        List_indexfile.txt to the datasets directory, a dedicated directory for the MC index files is already present with one file in there.
 - edit the relevant demoanalyzer file and insert the index file you
         want; for data, make sure to use the correct JSON validation file
         in each case; set an outputfile name of your choice for each smaple 
