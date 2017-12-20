@@ -24,7 +24,7 @@ process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(-1) )
 # set the number of events to be skipped (if any) at end of file below
 
 # define JSON file for 2012 data (not needed for MC)
-#goodJSON = '/home/cms-opendata/CMSSW_5_3_32/src/Demo/DemoAnalyzer/datasets/Cert_190456-208686_8TeV_22Jan2013ReReco_Collisions12_JSON.txt'
+#goodJSON = '../datasets/Cert_190456-208686_8TeV_22Jan2013ReReco_Collisions12_JSON.txt'
 
 #myLumis = LumiList.LumiList(filename = goodJSON).getCMSSWString().split(',')
 
@@ -39,8 +39,8 @@ import FWCore.Utilities.FileUtils as FileUtils
 # replace it by the one you wish to use                              *
 # ********************************************************************
 #
-# *** 2012 Higgs->4lepton simulated data set (299973 events) ***
-files2012data = FileUtils.loadListFromFile ('/home/cms-opendata/CMSSW_5_3_32/src/Demo/DemoAnalyzer/MCsets/CMS_MonteCarlo2012_Summer12_DR53X_SMHiggsToZZTo4L_M-125_8TeV-powheg15-JHUgenV3-pythia6_AODSIM_PU_S10_START53_V19-v1_10000_file_index.txt')
+# *** 2012 ZZ to 4 muons simulation ***
+files2012data = FileUtils.loadListFromFile ('../datasets/mc_lists/CMS_MonteCarlo2012_Summer12_DR53X_ZZTo4mu_8TeV-powheg-pythia6_AODSIM_PU_RD1_START53_V7N-v1_20000_file_index.txt')
 process.source = cms.Source("PoolSource",
     fileNames = cms.untracked.vstring(*files2012data    
     )
