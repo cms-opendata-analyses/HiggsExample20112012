@@ -11,6 +11,8 @@ The major modifications with respect to the original code are the following:
 * The different level examples have been moved to separate directories.
 * The file paths have been modified to be relative in the configuration files, i.e. they point to the datasets directory, which is under the directory from where there program will be run. 
 
+An automated workflow to run this analysis is available as [an example](https://github.com/reanahub/reana-demo-cms-h4l) on the REANA platfrom.
+
 # Introduction
 
 authors: N.Z. Jomhari, A. Geiser, A. Anuar.
