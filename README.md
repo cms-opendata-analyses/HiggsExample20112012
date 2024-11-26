@@ -130,7 +130,7 @@ There are four levels of increasing complexity for this example:
         In this tutorial we have done this for you.
 
         ```
-        git clone git://github.com/cms-opendata-analyses/HiggsExample20112012.git
+        git clone https://github.com/cms-opendata-analyses/HiggsExample20112012.git
         cd HiggsExample20112012/
         ls
         ```
@@ -211,8 +211,7 @@ There are four levels of increasing complexity for this example:
     - If you have not already done so, download and install the code.
     
         ```
-
-        git clone git://github.com/cms-opendata-analyses/HiggsExample20112012.git
+        git clone https://github.com/cms-opendata-analyses/HiggsExample20112012.git
         ```
     - For this example, all active code and macros are present in the `HiggsExample20112012/Level3` directories. The analysis code in c++ that you will *run* is present in  `HiggsExample20112012/HiggsDemoAnalyzer` directory, and it will need to be compiled. You will also use the files in the `HiggsExample20112012/rootfiles` directory when making the final plot, similar to the Level2 tutorial.
         ```
